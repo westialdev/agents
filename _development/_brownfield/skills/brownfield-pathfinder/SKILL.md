@@ -174,13 +174,13 @@ Revise until the developer confirms. **Only then** create files.
 ## Artifacts to produce
 
 Create or reconcile these in the **target project** (not in this config
-directory), honoring the project rules in `_development/CLAUDE.md`. Where an
+directory), honoring the project rules in `_development/AGENTS.md`. Where an
 artifact already exists in the legacy repo, **reconcile** with it rather than
 overwrite blindly.
 
 1. **`README.md`** — create or update. Add/refresh a **"Current task"** section
-   naming the refactor effort (CLAUDE.md rules 5 & 6 read and update this).
-2. **`CLAUDE.md`** — create or reconcile: pointers to `development-guidelines` and
+   naming the refactor effort (AGENTS.md rules 5 & 6 read and update this).
+2. **`AGENTS.md`** — create or reconcile: pointers to `development-guidelines` and
    `done`, the discovered stack/tooling and **test command**, the **hard
    constraints** (what must not change), and branch/commit conventions.
 3. **`doc/UBIQUITOUS.md`** — the recovered Ubiquitous Language glossary, using the
@@ -201,7 +201,7 @@ overwrite blindly.
    `_development` and `_brownfield` already provide.
 
 Whenever a new crucial domain term surfaces while producing artifacts, add it to
-`doc/UBIQUITOUS.md` (CLAUDE.md rule 4).
+`doc/UBIQUITOUS.md` (AGENTS.md rule 4).
 
 ---
 

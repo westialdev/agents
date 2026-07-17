@@ -4,7 +4,7 @@ description: >
   Step-0 pathfinder for starting a project from scratch. Interrogates the
   developer about problem, users, scope, domain language, expected end-to-end
   behavior, tech stack, architecture, and tooling — then lays the project
-  foundation (README.md, CLAUDE.md, doc/UBIQUITOUS.md, folder scaffold + config,
+  foundation (README.md, AGENTS.md, doc/UBIQUITOUS.md, folder scaffold + config,
   ADRs, and agent resources). Stack-agnostic. Trigger at the very beginning of a
   greenfield project: "start a new project", "bootstrap", "kickoff", "from
   scratch", "set up a new repo", or an empty/near-empty working directory with
@@ -26,7 +26,7 @@ Think of it as charting the map. `development-guidelines` walks it.
 - The working directory is empty or contains only scaffolding.
 - The developer says they are starting, bootstrapping, or kicking off a new
   project.
-- No `README.md` / `CLAUDE.md` foundation exists yet.
+- No `README.md` / `AGENTS.md` foundation exists yet.
 
 If a project foundation already exists, **do not run** — defer to the normal
 task workflow.
@@ -133,12 +133,12 @@ approval. Revise until the developer confirms. **Only then** create files.
 ## Artifacts to produce
 
 Create these in the **new project** (not in this config directory), aligned to
-the confirmed answers. Honor the project rules in `_development/CLAUDE.md`.
+the confirmed answers. Honor the project rules in `_development/AGENTS.md`.
 
 1. **`README.md`** — project overview: what it is, the problem/users, MVP scope,
-   how to set up and run, and a **"Current task"** section (CLAUDE.md rules 5 & 6
+   how to set up and run, and a **"Current task"** section (AGENTS.md rules 5 & 6
    read and update this).
-2. **`CLAUDE.md`** — project instructions for future agents: pointers to the
+2. **`AGENTS.md`** — project instructions for future agents: pointers to the
    guidelines and `done` skills, the confirmed stack/tooling, test command,
    branch/commit convention, and any project-specific rules surfaced during
    discovery.
@@ -160,7 +160,7 @@ the confirmed answers. Honor the project rules in `_development/CLAUDE.md`.
    layer has a source of truth.
 
 Whenever a new crucial domain term appears while producing artifacts, add it to
-`doc/UBIQUITOUS.md` (CLAUDE.md rule 4).
+`doc/UBIQUITOUS.md` (AGENTS.md rule 4).
 
 ---
 
