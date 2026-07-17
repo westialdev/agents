@@ -1,29 +1,29 @@
 ---
 name: westial-hierarchy-agents-resources
 description: >
-  How to consume the Westial hierarchy-style agents resources catalog
+  How to consume Westial Hierarchy Agents Resources
   (https://github.com/westialdev/agents). Trigger whenever an agent must
   create, configure, or provision another agent using resources from this
-  catalog: "create an agent", "set up an agent for <use case>", "install
-  agent resources from the catalog". Teaches how to discover the use-case
-  hierarchy, interrogate the developer to find the best-matching branch,
-  and accumulate and install every resource along that branch.
+  project: "create an agent", "set up an agent for <use case>", "install
+  agent resources". Teaches how to discover the use-case hierarchy,
+  interrogate the developer to find the best-matching branch, and
+  accumulate and install every resource along that branch.
 ---
 
 # Westial Hierarchy Agents Resources
 
-This skill turns you into a competent consumer of the **agents resources
-catalog**: a repository that organizes reusable agent resources — skills,
+This skill turns you into a competent consumer of **Westial Hierarchy Agents
+Resources**: a repository that organizes reusable agent resources — skills,
 instructions, and configuration — into a hierarchy of *use cases*. Your job,
 when this skill triggers, is to find the use-case branch that best matches the
 agent being created, collect every resource along that branch, and install
 those resources into the target agent.
 
-This skill is **consume only**. Never modify the catalog itself: do not edit,
-add, or remove anything inside it. If a needed use case is missing, tell the
-developer and stop.
+This skill is **consume only**. Never modify the repository itself: do not
+edit, add, or remove anything inside it. If a needed use case is missing, tell
+the developer and stop.
 
-## The catalog at a glance
+## The repository at a glance
 
 - Directories prefixed with an underscore (`_`) are **use cases**. They form a
   hierarchy: a parent use case applies to all its descendants, and each
@@ -42,7 +42,7 @@ developer and stop.
 `_development` → `_development/_greenfield`, and therefore receives the
 resources of *both* directories.
 
-## Step 0 — Obtain the catalog
+## Step 0 — Obtain the repository
 
 If a local checkout is not already available, clone it **with submodules**
 (some skills are git submodules and are empty without them):
@@ -56,7 +56,7 @@ If a checkout exists but skill directories are empty, run
 
 ## Step 1 — Map the hierarchy
 
-From the catalog root, list every underscore-prefixed directory recursively to
+From the repository root, list every underscore-prefixed directory recursively to
 build the use-case tree, and read the `README.md` files you find along the way
 — the root one first, then any local ones. Note which directories contain
 `skills/`, `AGENTS.md`, or `.agents/`.
@@ -76,7 +76,7 @@ hierarchy at a time:
    `_development/_greenfield`") before installing anything.
 
 If no top-level use case matches, report the gap to the developer and stop —
-do not improvise resources and do not add anything to the catalog.
+do not improvise resources and do not add anything to the repository.
 
 ## Step 3 — Accumulate the resources along the branch
 
@@ -93,7 +93,7 @@ because a child has one of the same kind.
 ## Step 4 — Install into the target agent
 
 Map the accumulated resources onto the target platform's conventions. Stay
-platform-neutral: the catalog does not assume a specific agent product.
+platform-neutral: the repository does not assume a specific agent product.
 
 - **Skills** — copy each collected skill directory, whole, into wherever the
   target agent loads skills from.
@@ -105,8 +105,8 @@ platform-neutral: the catalog does not assume a specific agent product.
   agent's configuration location, translating file layout if the platform
   uses a different convention.
 
-Copy — never symlink into the catalog checkout, and never point the target
-agent at catalog paths, unless the developer explicitly asks for a linked
+Copy — never symlink into the repository checkout, and never point the target
+agent at repository paths, unless the developer explicitly asks for a linked
 setup.
 
 ## Step 5 — Report
