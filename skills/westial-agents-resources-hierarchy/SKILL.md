@@ -1,7 +1,7 @@
 ---
-name: westial-hierarchy-agents-resources
+name: westial-agents-resources-hierarchy
 description: >
-  How to consume Westial Hierarchy Agents Resources
+  How to consume Westial Agents Resources Hierarchy
   (https://github.com/westialdev/agents). Trigger whenever an agent must
   create, configure, or provision another agent using resources from this
   project: "create an agent", "set up an agent for <use case>", "install
@@ -10,10 +10,10 @@ description: >
   accumulate and install every resource along that branch.
 ---
 
-# Westial Hierarchy Agents Resources
+# Westial Agents Resources Hierarchy
 
-This skill turns you into a competent consumer of **Westial Hierarchy Agents
-Resources**: a repository that organizes reusable agent resources — skills,
+This skill turns you into a competent consumer of **Westial Agents Resources
+Hierarchy**: a repository that organizes reusable agent resources — skills,
 instructions, and configuration — into a hierarchy of *use cases*. Your job,
 when this skill triggers, is to find the use-case branch that best matches the
 agent being created, collect every resource along that branch, and install

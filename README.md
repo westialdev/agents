@@ -1,16 +1,16 @@
-Westial Hierarchy Agents Resources
+Westial Agents Resources Hierarchy
 ==================================
 
 A collection of personal configurations, skills, and guidelines for AI Agents.
 
 ## Installation and usage
 
-Westial Hierarchy Agents Resources is meant to be consumed by agents that
+Westial Agents Resources Hierarchy is meant to be consumed by agents that
 create other agents. The only thing such an agent needs is the
-[`westial-hierarchy-agents-resources`](skills/westial-hierarchy-agents-resources/SKILL.md)
+[`westial-agents-resources-hierarchy`](skills/westial-agents-resources-hierarchy/SKILL.md)
 skill, located in the root `skills/` directory:
 
-1. Install `skills/westial-hierarchy-agents-resources` into the agent that
+1. Install `skills/westial-agents-resources-hierarchy` into the agent that
    will create agents, wherever that agent loads skills from.
 2. That skill carries the full knowledge of how to exploit these resources: it
    clones the repository (with submodules) when no checkout is available,
