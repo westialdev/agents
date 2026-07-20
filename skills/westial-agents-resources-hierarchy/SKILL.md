@@ -61,19 +61,34 @@ build the use-case tree, and read the `README.md` files you find along the way
 — the root one first, then any local ones. Note which directories contain
 `skills/`, `AGENTS.md`, or `.agents/`.
 
+Each use-case directory carries a `README.md` whose **"Choose this use case
+when"** line is its *selection hook*: a plain description of the kind of agent
+that use case is for, with recognition signals. That hook is what you match the
+agent being created against in Step 2 — read every one before interrogating the
+developer. If a use-case directory has no such hook, fall back to its directory
+name and contents, and note the missing hook in your Step 5 report.
+
 ## Step 2 — Find the best-matching branch
 
 Do not guess the use case. **Interrogate the developer**, one level of the
 hierarchy at a time:
 
 1. Present the top-level use cases and ask which one matches the agent being
-   created. Describe each briefly, using what you read in Step 1.
+   created. Describe each briefly using its selection hook from Step 1, and
+   compare the agent's intended purpose against each hook's recognition
+   signals.
 2. Descend into the chosen use case. If it has child use cases, present them
    and ask whether one of them narrows the match — or whether the parent alone
    is the right scope.
 3. Repeat until you reach a leaf or the developer stops at an inner node.
 4. Confirm the final branch explicitly (e.g. "`_development` →
    `_development/_greenfield`") before installing anything.
+
+For example, an agent that must find web vulnerabilities, run an authorized
+web-application penetration test, or scrape and recon a third-party web
+system matches the branch `_development` → `_development/_hacker`, and so
+receives the base development resources plus the `_hacker` browser MCP, rules
+of engagement, and web skills.
 
 If no top-level use case matches, report the gap to the developer and stop —
 do not improvise resources and do not add anything to the repository.
