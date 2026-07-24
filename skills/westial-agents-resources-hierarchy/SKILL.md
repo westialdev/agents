@@ -66,7 +66,7 @@ when"** line is its *selection hook*: a plain description of the kind of agent
 that use case is for, with recognition signals. That hook is what you match the
 agent being created against in Step 2 — read every one before interrogating the
 developer. If a use-case directory has no such hook, fall back to its directory
-name and contents, and note the missing hook in your Step 5 report.
+name and contents, and note the missing hook in your Step 6 report.
 
 ## Step 2 — Find the best-matching branch
 
@@ -93,7 +93,25 @@ of engagement, and web skills.
 If no top-level use case matches, report the gap to the developer and stop —
 do not improvise resources and do not add anything to the repository.
 
-## Step 3 — Accumulate the resources along the branch
+## Step 3 — Collect the provisioning requirements
+
+A use case may declare a **"Provisioning requirements"** section in its
+`README.md`: settings the target agent is not viable without (for example,
+`_knowledge/_interviewer` requires an interview definition — topic,
+duration, mode, and so on). Check every use case along the confirmed
+branch:
+
+1. For each declared requirement, take the value from what the developer
+   has already said, or ask the developer for it. Where the requirement
+   states a default, offer it; otherwise the developer must decide. Never
+   invent a value, and never leave a requirement unset.
+2. Record the collected values as the use case's **provisioning
+   definition** — you will bake it into the target agent's instructions in
+   Step 5.
+
+If the branch declares no provisioning requirements, skip this step.
+
+## Step 4 — Accumulate the resources along the branch
 
 Walk the confirmed branch **from root to leaf** and collect, in that order:
 
@@ -105,7 +123,7 @@ Walk the confirmed branch **from root to leaf** and collect, in that order:
 Accumulation is additive: never drop, dedupe, or override a parent's resource
 because a child has one of the same kind.
 
-## Step 4 — Install into the target agent
+## Step 5 — Install into the target agent
 
 Map the accumulated resources onto the target platform's conventions. Stay
 platform-neutral: the repository does not assume a specific agent product.
@@ -115,7 +133,8 @@ platform-neutral: the repository does not assume a specific agent product.
 - **Instructions** — install the collected `AGENTS.md` contents parent-first
   into the target agent's instructions document. When concatenating multiple
   files into one, precede each part with a comment or heading naming the use
-  case it came from.
+  case it came from. Append each provisioning definition collected in
+  Step 3, under a heading naming its use case.
 - **Configuration** — apply the collected `.agents/` files to the target
   agent's configuration location, translating file layout if the platform
   uses a different convention.
@@ -124,11 +143,12 @@ Copy — never symlink into the repository checkout, and never point the target
 agent at repository paths, unless the developer explicitly asks for a linked
 setup.
 
-## Step 5 — Report
+## Step 6 — Report
 
 Tell the developer, concisely:
 
 - the branch that was chosen and why;
 - every skill, instructions file, and configuration file installed, with its
   source use case and destination path;
+- the provisioning definition collected in Step 3, if any, as installed;
 - anything expected but missing (e.g. an empty submodule).

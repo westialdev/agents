@@ -1,3 +1,6 @@
 [submodule "_development/_review/skills/code-review-skill"]
 	path = _development/_review/skills/code-review-skill
 	url = git@github.com:awesome-skills/code-review-skill.git
+[submodule "_knowledge/skills/deep-research"]
+	path = _knowledge/skills/deep-research
+	url = https://github.com/199-biotechnologies/claude-deep-research-skill.git
