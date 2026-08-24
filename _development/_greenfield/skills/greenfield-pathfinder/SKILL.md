@@ -119,6 +119,11 @@ Every non-trivial choice here becomes an **ADR** (see artifacts).
   `_development` and `_greenfield` already provide — e.g. a project-specific
   skill, or an MCP server configuration (a database, an API, a docs source)?
   Only add these when the project genuinely requires them.
+- Which **technology skills** should this project's agents carry for the stack
+  confirmed in area 4? Do not answer this from memory: run
+  `stack-skill-sourcing`, which ranks sources by proximity to the technology's
+  owner (official first), verifies each candidate, and reports a shortlist for
+  the developer to approve.
 
 ---
 
@@ -154,7 +159,9 @@ the confirmed answers. Honor the project rules in `_development/AGENTS.md`.
 6. **Agent resources (when required)** — only if area 5 surfaced a real need:
    project-specific skills and/or MCP server configuration placed in the
    project's agent directory, *in addition to* the resources inherited from
-   `_development` and `_greenfield`.
+   `_development` and `_greenfield`. Stack-matched third-party skills are
+   sourced and vetted by `stack-skill-sourcing`, not chosen here; record the
+   adopted ones in an ADR and in the project's `AGENTS.md`.
 7. **Evaluation scenarios** — record the area-3 scenarios where the project keeps
    acceptance criteria (e.g. `doc/scenarios.md` or an equivalent), so the E2E
    layer has a source of truth.
@@ -172,6 +179,7 @@ Once the foundation is confirmed and written:
 2. Point at the first evaluation scenario as the natural starting point.
 3. Explicitly hand off: from here on, code is written under
    `development-guidelines` (TDD, red-green-refactor, errors-must-explode) and
-   completed under `done`.
+   completed under `done`. If a main technology enters the project later that
+   was not in the confirmed stack, `stack-skill-sourcing` runs again.
 
 The pathfinder's job ends at the foundation. Do not begin implementing features.
