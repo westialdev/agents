@@ -94,7 +94,10 @@ developer to correct. Do not ask the developer to narrate the code first — map
 then have them fix what you got wrong. Cover:
 
 - **Stack & tooling** — languages, frameworks, build tool, package manager, and
-  the exact **test command** and how to run the app. Detect from the repo.
+  the exact **test command** and how to run the app. Detect from the repo. Once
+  the stack is mapped and confirmed, run `stack-skill-sourcing` to find the
+  technology skills the agent should carry for it — official sources first,
+  vetted before use.
 - **Structure & dependencies** — modules/packages, layering, entry points, and the
   dependency edges between parts. Note cycles and tight coupling.
 - **Hotspots** — via git archaeology (churn, age, ownership) and size, find the
@@ -198,7 +201,9 @@ overwrite blindly.
    exception to "no code": nets come before surgery.
 7. **Agent resources (when required)** — only if discovery surfaced a real need:
    project-specific skills and/or MCP configuration, *in addition to* what
-   `_development` and `_brownfield` already provide.
+   `_development` and `_brownfield` already provide. Stack-matched third-party
+   skills are sourced and vetted by `stack-skill-sourcing`, not chosen here;
+   record the adopted ones in an ADR and in the project's `AGENTS.md`.
 
 Whenever a new crucial domain term surfaces while producing artifacts, add it to
 `doc/UBIQUITOUS.md` (AGENTS.md rule 4).
