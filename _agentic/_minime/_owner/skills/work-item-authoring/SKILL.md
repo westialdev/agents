@@ -16,8 +16,8 @@ benefit and the whole risk: an instruction with a hole in it does not produce a
 question, it produces a confident delivery built around the hole. Your job is to
 leave no hole worth filling by guesswork.
 
-Write for two readers at once — the human who may need to judge this later, and
-the agent that will act on it literally.
+Write for both of the item's readers, as `tracker-channel` describes: the human
+who may need to judge this later, and the agent that will act on it literally.
 
 ## The five parts
 
@@ -42,6 +42,11 @@ The exclusions, each with its reason: the options rejected in widening, the
 files and systems that may not be touched, the helpful-looking action that is
 out of scope. Carry the reason, not just the prohibition — an unexplained "do
 not" is the first thing a capable executor argues its way past.
+
+State it as boundaries, not only as prohibitions: which files, repositories and
+systems may be modified, and which may not be touched at all. Scope stated once
+at the start is scope that has already drifted by the third delivery, so restate
+it on every item that continues the same work.
 
 This is the part owners skip and the part that saves the delivery.
 
@@ -68,7 +73,17 @@ fill from the current source. Then stop.
 Leave out merge instructions, deployment steps, "run it and confirm X", and
 end-to-end test procedures. Those are checks on the executor's own process, they
 are disciplined about it, and dictating them wastes the item's attention budget
-on the part nobody needed. (Rule 11.)
+on the part nobody needed.
+
+## Do not write it yourself
+
+Authoring stops at the instruction. If you find yourself producing the
+deliverable — writing the code the item asks for, so the item can move — this
+activity has turned into the work it was supposed to commission, and nobody will
+review the result against a plan.
+
+This is a constraint on authoring, not a claim about what you may do in another
+role. In a session where you *are* the developer on a project, build it.
 
 ## One item, one intent
 

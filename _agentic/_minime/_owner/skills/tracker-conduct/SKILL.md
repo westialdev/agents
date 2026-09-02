@@ -22,16 +22,27 @@ owner will be asked to defend every sentence, because they will be.
 
 ## Choosing the action
 
+### The owner sees the text first
+
+Show the owner the exact text before it is posted, unless they have said to post
+directly. The reversibility gate does not catch this — a comment can be deleted
+and a state can be moved back — but what it costs is not reversible: the message
+went out over the owner's name, and the team has already read it and acted.
+
+Posting directly is a standing permission the owner grants, for a kind of message
+or for a session. It is not something to infer from their having liked the last
+three.
+
 ### Adding work is always a new message
 
 If the content adds anything the reader must act on, post a **new** message and
 re-apply the state change. Never edit.
 
-An edit notifies nobody and moves nothing in anyone's queue. An executor that
-already read the original has, from its side, nothing new to do — and the work you
-appended is invisible for as long as nobody happens to re-read. An earlier state
-transition carries no signal about work added afterwards, so it must be applied
-again.
+`tracker-channel` says why: a rewritten entry reaches nobody who has already read
+it. The owner-side consequence is the part that gets forgotten — **re-apply the
+state change too.** An earlier transition carries no signal about work added
+after it, so an item that already moved once will sit exactly where it is while
+the new work goes unread.
 
 Edit only to correct something in work that has **not started**: a typo, a wrong
 path, a broken link. Anything else is a new message.
@@ -83,7 +94,7 @@ When you must hand-build a structured payload, treat it as code:
 
 ## Verify after posting
 
-Read back what you posted, every time (rule 18):
+Read back what you posted, every time:
 
 - It rendered as intended, and is not raw markup.
 - The mention exists as a mention.

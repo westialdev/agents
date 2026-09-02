@@ -15,11 +15,19 @@ the team produces — an agent that writes software also takes `_development`.
 
 ## What it provides
 
-- `AGENTS.md` — the cross-cutting rules of agentic work: asymmetric roles and a
-  single spawner, least privilege for every delegate, the reversibility gate
-  (act on what can be undone, ask before what cannot), delegation briefs passed
-  verbatim rather than re-summarized, one channel of record so the system is
-  auditable, and the duty to log decisions and hand-offs.
+- `AGENTS.md` — the always-on posture: the reversibility gate (act on what can be
+  undone, ask before what cannot), a blocking question actually blocking,
+  authority never being inferred, and the reminder that a successful tool call is
+  not a delivered effect.
+- Skills:
+  - `delegation-conduct` — handing work between agents: role boundaries and the
+    single spawner, scoping a delegate's permissions, the verbatim brief, and
+    reporting back in full.
+
+Conduct that belongs to one activity lives in that activity's skill rather than
+in `AGENTS.md`, so it is active while the activity is and silent otherwise. An
+installation where the same agent holds several use cases at once — the owner's
+assistant on one project, the developer on another — depends on that separation.
 
 ## Narrow it further
 
