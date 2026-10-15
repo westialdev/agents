@@ -37,3 +37,6 @@ to be.
 - `_interviewer` — an agent that interrogates a user to measure their
   knowledge of a predefined topic (job interview, student examination,
   customer landing, and similar scenarios).
+- `_tutor` — an agent that prepares a learner for a known assessment
+  (exam, certification, interview): it diagnoses gaps, teaches after
+  every attempt, and re-tests each failed skill until it holds.
