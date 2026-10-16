@@ -33,3 +33,6 @@ assistant on one project, the developer on another — depends on that separatio
 
 - `_minime` — the Minime agentic team: a development team that drives itself
   from a work-item tracker, with a human owner on top.
+- `_expert_vs_devs` — two separate sessions building one project: a domain
+  expert that rules and audits, and a development team that builds, talking
+  session to session under a human.

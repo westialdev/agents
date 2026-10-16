@@ -21,7 +21,17 @@ Run this skill when the user says a change is finished, completed, or asks to co
 
 ## Step 1 — Run tests
 
-Run the project's test command. For this project: `pnpm run test`.
+Run the project's OWN test command. **Discover it — never assume it.**
+
+Look in this order: the project's `CLAUDE.md` / `AGENTS.md`, its README, then its
+manifest (`package.json` scripts, `pyproject.toml`, `Makefile`, `justfile`).
+Common shapes: `pnpm run test`, `npm test`, `pytest`, `python -m behave tests/unit`,
+`cargo test`, `go test ./...`, `make test`.
+
+**Never substitute a command that merely looks equivalent, and never invent one.**
+A suite that is not the project's suite proves nothing, and a green run of the
+wrong command is worse than no run at all — it reports success you have not earned.
+If you cannot find the command, stop and ask rather than guessing.
 
 - If tests **fail**: stop. Report failures. Do not proceed to review or commit.
 - If tests **pass**: proceed to Step 2.
@@ -38,7 +48,26 @@ Brief the subagent:
 
 Subagent returns findings.
 
-- If **no meaningful improvements**: skip to Step 4.
+- If **no meaningful improvements**: skip to Step 2b.
+
+---
+
+## Step 2b — Beyond-the-stubs review (subagent)
+
+**After the refactor review, run a SECOND pass with the `review-beyond-the-stubs`
+skill** whenever the change runs unattended, touches money, or talks to an external
+system.
+
+The refactor review is briefed on duplication, naming and abstraction leaks. **The
+bugs that actually reach production are none of those** — a naive datetime meeting an
+aware one, a per-item API loop against a hard deadline, a stale frozen artifact, a
+"not available yet" value persisted as a real observation, a raw/adjusted mismatch
+inside a ratio. A green suite cannot see any of them, because tests stub the world.
+
+Brief the subagent with the `review-beyond-the-stubs` skill and the diff. Treat its
+findings like any other: fix, or record why not.
+
+- If **no meaningful findings**: skip to Step 4.
 - If **improvements found**: go to Step 3.
 
 ---
