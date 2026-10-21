@@ -37,13 +37,23 @@ Each teacher produces two files:
      labelled and consistent);
    - the full worked solution and the final answer with units and rounding;
    - the **likely mistake** and one sentence on why it is wrong;
-   - a **variant** (same skill, new numbers and wording) with its answer.
+   - a **variant** (same skill, new numbers and wording; in a text subject,
+     a new fact, quotation or extract) with its answer;
+   - the **source** of every fact and quotation it relies on (chapter,
+     page, section).
 
 ## Verification
 
 Every number in the lessons and banks must be **computed, not recalled**.
 Use code (for example `python3`) to check answers, rounding, the values of
-the likely mistakes, and the consistency of composite diagrams. Read through
+the likely mistakes, and the consistency of composite diagrams.
+
+Every fact must be **checked, not recalled** (`_tutor` rule 13): plot
+events and their order, who says what, dates, definitions, and the exact
+wording of quotations. Check them against the learner's own text or the
+best available source (`source-of-truth`), and mark anything you could not
+check as unverified rather than presenting it as fact. A question that asks
+the learner to link events is only as good as the order of those events. Read through
 each bank yourself before the first question from it, checking that the
 answers are right, the difficulty is labelled correctly, and no question
 leaks the answer to another.

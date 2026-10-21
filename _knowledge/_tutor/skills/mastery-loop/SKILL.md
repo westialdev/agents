@@ -16,7 +16,9 @@ description: >
 1. **Ask**: one question, or a short batch in quick-fire mode, with the
    expected format stated (working, units, rounding).
 2. **Mark**: compare the attempt with the bank's answer. Score method and
-   format separately (`exam-conditions`).
+   format separately, or per criterion for written work
+   (`exam-conditions`). For a written assessment, end the reply with the
+   language check (`writing-accuracy`).
 3. **Teach**: say what was right before what was wrong. Then give the
    correct worked answer in exam layout, name the trap in one sentence, and
    add a one-line rule to remember. When it helps, add a picture or
@@ -29,6 +31,17 @@ description: >
    - If an incomplete message looks accidentally cut off, ask the learner to
      finish it. Do not mark it.
 5. **Update the score line** (`progress-report`).
+
+## Learner-led drills
+
+A learner may skip the plan and ask for a drill directly ("give me a
+sentence and I'll connect it"). If it is within the official scope, run it:
+a learner who asks for practice is engaged. But (`_tutor` rule 14):
+
+- note which steps it skipped (scope intake, lessons, uncovered scope) and
+  return to them in the same session;
+- an improvised question needs the same checks as a bank question
+  (`_tutor` rule 13). If you can't check a fact behind it, don't ask it.
 
 ## Difficulty
 

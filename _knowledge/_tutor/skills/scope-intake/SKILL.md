@@ -37,6 +37,10 @@ sometimes it shows that the official scope you were given is wrong.
    the official text.
 5. **Keep the official scope** as the course scope unless the creator
    changes it (`_tutor` rule 4).
+6. **Triage against the calendar** (`_tutor` rule 11). Compare the time
+   left before the assessment with the gaps you found, and tell the creator
+   which gap costs the most marks and will be covered first (for example,
+   the unread half of a set book when the exam is tomorrow).
 
 "Nothing is tricky for me" is not evidence. Plan the diagnostic as if every
 area were unknown.

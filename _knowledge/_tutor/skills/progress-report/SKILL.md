@@ -16,10 +16,24 @@ After every marked answer, show one line:
 
 > 📊 Score: correct / asked (percent) (Section A x/y · Section B x/y · …)
 
+For rubric-marked written work, show the latest band per criterion and the
+open habits instead, for example:
+
+> 📊 Paragraph 3: A 5 · B 4 · C 4 · D 5 (/8) · Habits: past tense, "when"
+
 Keep the rules for re-scoring consistent. If an item is reclassified (for
 example a wrong answer that was really an unknown term, `_tutor` rule 7),
 change the line and say why. Never inflate the score to motivate, and never
 hide a miss.
+
+## Persisting progress
+
+A preparation often spans several sessions (`_tutor` rule 16). After every
+marked answer, save the score, the re-test list, the open habits and the
+uncovered scope to a private file (next to the question banks, out of the
+learner's course folder) or to the platform's memory. At the start of a
+session, read it back, tell the learner where they stand, and begin with the
+re-test list.
 
 ## Interim analysis (creator asks mid-session)
 
