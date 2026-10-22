@@ -4,7 +4,7 @@
 knowledge about a topic** — gathering it, verifying it, assessing it, or
 working with what a person knows and has experienced. Recognition signals:
 "research a topic", "find the source of truth", "verify this information",
-"exam", "quiz", "interview", "assess what someone knows".
+"exam", "quiz", "interview", "assess what someone knows", "teach me X".
 
 This is the base knowledge use case: every knowledge sub-use-case below
 builds on top of it and is combined with it. Its core competence is
@@ -40,3 +40,8 @@ to be.
 - `_tutor` — an agent that prepares a learner for a known assessment
   (exam, certification, interview): it diagnoses gaps, teaches after
   every attempt, and re-tests each failed skill until it holds.
+- `_teacher` — an agent that teaches a subject from scratch (or from the
+  learner's current level) towards usable competence, with no assessment
+  setting the scope: goal intake, a prerequisite-ordered curriculum, a
+  teach-practice-feedback loop, and spaced review. It narrows further into
+  `_programming_language` for teaching a programming language.
