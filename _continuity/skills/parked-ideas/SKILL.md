@@ -7,7 +7,7 @@ description: >
   the human's alone sit at its foot. Trigger when the human says "park this", "for later",
   "add it to the TODO", "what's pending", "what's waiting on me"; when the agent is about to
   suggest or start work the human did not ask for; when a teammate proposes something; or at
-  a pause.
+  a pause, or when a thread on the WIA stops being live without being finished.
 ---
 
 # Parked ideas: waiting until called
@@ -18,8 +18,16 @@ start it and do not derail the conversation. Park it here. **The human decides w
 when.** Nothing on this list is scheduled.
 
 What is live right now, and what must happen first thing next time, belongs in the WIA (skill
-`where-i-am`, default `WHEREIAM.md`) instead. When a parked item becomes the next thing to do,
-the human moves it there.
+`where-i-am`, default `WHEREIAM.md`) instead: the human's notes and the board of work threads.
+When the human calls a parked item, it moves there, as a note in the human's words or as a new
+thread, and the item here is struck through with a pointer to it. When a thread stops being
+live without being finished, it comes here as an item that names the thread.
+
+## Who writes the file
+
+**You, the agent that owns this directory, are the only writer of its backlog.** No other
+agent writes it: a teammate's suggestion reaches it through you. Backlog or WIA files in
+nested directories belong to the agents working there. You may read them, never write them.
 
 ## Scope: the live branches of the path
 
