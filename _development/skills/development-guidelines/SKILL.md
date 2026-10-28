@@ -18,7 +18,7 @@ mirroring the section headings below:
 
 - [`examples/typescript.md`](examples/typescript.md)
 - [`examples/python.md`](examples/python.md) — testing examples use Gherkin with [behave](https://behave.readthedocs.io/)
-- [`examples/go.md`](examples/go.md) — errors as values and `panic`, string-backed enums, `go test`
+- [`examples/go.md`](examples/go.md) — testing examples use Gherkin with [godog](https://github.com/cucumber/godog), run by `go test`
 
 **Load only the file for the language you are writing.** If the task is in
 Python, open `examples/python.md` and do not open the others; if it is in

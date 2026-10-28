@@ -26,10 +26,12 @@ Conventions used in this file:
 - **Mocking**: hand-written fakes first; [`testify/mock`](https://github.com/stretchr/testify)
   or [`go.uber.org/mock`](https://github.com/uber-go/mock) when a fake would
   need call recording.
-- **Tests**: the standard `testing` package and `go test`, in an external
-  `_test` package so tests use only the public API. Projects that specify
-  behaviour in Gherkin use [godog](https://github.com/cucumber/godog) instead,
-  with the same red-green-refactor cycle.
+- **Tests**: Gherkin feature files executed with
+  [godog](https://github.com/cucumber/godog), run by `go test` through a
+  `TestFeatures` function. Step definitions live in an external `_test`
+  package so they use only the public API, on a scenario struct that godog
+  builds fresh for every scenario. `Strict: true` makes undefined or pending
+  steps fail.
 
 ---
 
@@ -214,20 +216,52 @@ member added later and missing from a switch fails the build.
 ## Mocking — what to mock and what not to
 
 Mock I/O boundaries with a fake that implements the consumer's interface;
-verify real behaviour of real code.
+verify real behaviour of real code. The examples below are expressed as godog
+scenarios and their step definitions.
+
+```gherkin
+# internal/users/features/user_service.feature
+Feature: UserService.GetUser
+
+  # BAD — this scenario only proves the fake returns what we told it to.
+  # It exercises the fake, not UserService. Do not write tests like this.
+  Scenario: GetUser returns the stubbed user (BAD — worthless)
+    Given a user repository stubbed to return user "1"
+    When I get user "1"
+    Then the returned user id is "1"
+
+  # GOOD — the fake only isolates the database; the assertion checks the real
+  # guard inside UserService (it must fail when the repository finds nothing).
+  Scenario: GetUser fails when the user is not found (GOOD)
+    Given a user repository that finds no user
+    When I get user "missing-id"
+    Then a UserNotFoundError is raised for "missing-id"
+
+  # GOOD, with call verification — testify/mock records how the boundary was used.
+  Scenario: GetUser queries the repository once and fails (GOOD)
+    Given a mocked user repository expecting one lookup of "missing-id"
+    When I get user "missing-id"
+    Then a UserNotFoundError is raised for "missing-id"
+    And the repository expectations are met
+```
 
 ```go
-// internal/users/service_test.go
+// internal/users/user_service_steps_test.go
 package users_test
 
 import (
 	"context"
 	"errors"
+	"fmt"
 	"testing"
+
+	"github.com/cucumber/godog"
+	"github.com/stretchr/testify/mock"
 
 	"example.com/app/internal/users"
 )
 
+// fakeRepo is a hand-written fake: it isolates the database, nothing more.
 type fakeRepo struct {
 	user *users.User
 	err  error
@@ -237,43 +271,7 @@ func (f fakeRepo) Find(ctx context.Context, id string) (*users.User, error) {
 	return f.user, f.err
 }
 
-// BAD — this test only proves the fake returns what we told it to.
-// It exercises the fake, not UserService. Do not write tests like this.
-func TestGetUserReturnsStubbedUser(t *testing.T) {
-	svc := users.NewUserService(fakeRepo{user: &users.User{ID: "1"}})
-
-	got, err := svc.GetUser(context.Background(), "1")
-
-	if err != nil {
-		t.Fatal(err)
-	}
-	if got.ID != "1" { // only proves the fake echoed its stub back
-		t.Fatalf("got id %q, want %q", got.ID, "1")
-	}
-}
-
-// GOOD — the fake only isolates the database; the assertion checks the real
-// guard inside UserService (it must fail when the repository finds nothing).
-func TestGetUserFailsWhenNotFound(t *testing.T) {
-	svc := users.NewUserService(fakeRepo{})
-
-	_, err := svc.GetUser(context.Background(), "missing-id")
-
-	var notFound *users.UserNotFoundError
-	if !errors.As(err, &notFound) {
-		t.Fatalf("expected UserNotFoundError, got %v", err)
-	}
-	if notFound.ID != "missing-id" {
-		t.Fatalf("error names id %q, want %q", notFound.ID, "missing-id")
-	}
-}
-```
-
-When the test must check *how* a boundary was called (arguments, call count),
-use a mocking library instead of growing the fake:
-
-```go
-// testify/mock — same GOOD test, with call verification
+// mockRepo uses testify/mock when the test must verify how it was called.
 type mockRepo struct{ mock.Mock }
 
 func (m *mockRepo) Find(ctx context.Context, id string) (*users.User, error) {
@@ -282,20 +280,90 @@ func (m *mockRepo) Find(ctx context.Context, id string) (*users.User, error) {
 	return user, args.Error(1)
 }
 
-func TestGetUserQueriesRepoOnceAndFails(t *testing.T) {
-	repo := &mockRepo{}
-	repo.On("Find", mock.Anything, "missing-id").Return(nil, nil).Once()
-	svc := users.NewUserService(repo)
+// userScenario holds the state of one scenario; godog builds a fresh one each time.
+type userScenario struct {
+	repo   users.UserRepository
+	mocked *mockRepo
+	result *users.User
+	err    error
+}
 
-	_, err := svc.GetUser(context.Background(), "missing-id")
+func (s *userScenario) repoReturnsUser(id string) {
+	s.repo = fakeRepo{user: &users.User{ID: id}}
+}
 
-	var notFound *users.UserNotFoundError
-	if !errors.As(err, &notFound) {
-		t.Fatalf("expected UserNotFoundError, got %v", err)
+func (s *userScenario) repoFindsNoUser() {
+	s.repo = fakeRepo{}
+}
+
+func (s *userScenario) mockedRepoExpectsOneLookup(id string) {
+	s.mocked = &mockRepo{}
+	s.mocked.On("Find", mock.Anything, id).Return(nil, nil).Once()
+	s.repo = s.mocked
+}
+
+func (s *userScenario) getUser(ctx context.Context, id string) {
+	s.result, s.err = users.NewUserService(s.repo).GetUser(ctx, id)
+}
+
+func (s *userScenario) returnedUserIDIs(id string) error {
+	// This asserts only that the fake echoed its stub back — proves nothing.
+	if s.err != nil {
+		return s.err
 	}
-	repo.AssertExpectations(t)
+	if s.result.ID != id {
+		return fmt.Errorf("got user id %q, want %q", s.result.ID, id)
+	}
+	return nil
+}
+
+func (s *userScenario) userNotFoundRaisedFor(id string) error {
+	var notFound *users.UserNotFoundError
+	if !errors.As(s.err, &notFound) {
+		return fmt.Errorf("expected UserNotFoundError, got %v", s.err)
+	}
+	if notFound.ID != id {
+		return fmt.Errorf("error names id %q, want %q", notFound.ID, id)
+	}
+	return nil
+}
+
+func (s *userScenario) repoExpectationsMet(ctx context.Context) {
+	s.mocked.AssertExpectations(godog.T(ctx))
+}
+
+func InitializeScenario(sc *godog.ScenarioContext) {
+	s := &userScenario{}
+	sc.Given(`^a user repository stubbed to return user "([^"]*)"$`, s.repoReturnsUser)
+	sc.Given(`^a user repository that finds no user$`, s.repoFindsNoUser)
+	sc.Given(`^a mocked user repository expecting one lookup of "([^"]*)"$`, s.mockedRepoExpectsOneLookup)
+	sc.When(`^I get user "([^"]*)"$`, s.getUser)
+	sc.Then(`^the returned user id is "([^"]*)"$`, s.returnedUserIDIs)
+	sc.Then(`^a UserNotFoundError is raised for "([^"]*)"$`, s.userNotFoundRaisedFor)
+	sc.Then(`^the repository expectations are met$`, s.repoExpectationsMet)
+}
+
+// TestFeatures runs every feature file in ./features through go test.
+func TestFeatures(t *testing.T) {
+	suite := godog.TestSuite{
+		ScenarioInitializer: InitializeScenario,
+		Options: &godog.Options{
+			Format:   "pretty",
+			Paths:    []string{"features"},
+			Strict:   true, // undefined or pending steps fail the run
+			TestingT: t,
+		},
+	}
+	if suite.Run() != 0 {
+		t.Fatal("feature tests failed")
+	}
 }
 ```
+
+Use a hand-written fake to isolate a boundary, and `testify/mock` only when the
+scenario must verify how the boundary was called (arguments, call count).
+`godog.T(ctx)` hands testify the running test, so a failed expectation fails
+the scenario.
 
 Preferred mocking tools: hand-written fakes; `testify/mock` or
 `go.uber.org/mock` (`mockgen`) when calls must be verified.
@@ -349,23 +417,36 @@ var _ orders.PaymentGateway = fakeGateway{}
 
 ---
 
-## Test-driven development — red-green-refactor with go test
+## Test-driven development — red-green-refactor with godog
 
-One **test function** (or one table row) = one behaviour. Work one test at a
-time: write it, run `go test`, watch it fail for the right reason (RED), then
-write only enough production code to make it pass (GREEN), then refactor with
-the full suite green.
+One **Scenario** = one behaviour. Work one scenario at a time: write the
+scenario and its steps, run `go test`, watch it fail for the right reason (RED),
+then write only enough production code to make it pass (GREEN), then refactor
+with the full suite green.
 
-### RED — write one failing test
+### RED — write one failing scenario
+
+```gherkin
+# internal/users/features/user_lookup.feature
+Feature: Looking up a user
+
+  Scenario: fetching a missing user fails loudly
+    Given a user repository with no user "missing-id"
+    When I fetch user "missing-id"
+    Then a UserNotFoundError is raised
+```
 
 ```go
-// internal/users/lookup_test.go
+// internal/users/user_lookup_steps_test.go
 package users_test
 
 import (
 	"context"
 	"errors"
+	"fmt"
 	"testing"
+
+	"github.com/cucumber/godog"
 
 	"example.com/app/internal/users"
 )
@@ -376,14 +457,47 @@ func (emptyRepo) Find(ctx context.Context, id string) (*users.User, error) {
 	return nil, nil
 }
 
-func TestFetchingMissingUserFailsLoudly(t *testing.T) {
-	svc := users.NewUserService(emptyRepo{})
+type lookupScenario struct {
+	repo users.UserRepository
+	user *users.User
+	err  error
+}
 
-	_, err := svc.GetUser(context.Background(), "missing-id")
+func (s *lookupScenario) emptyRepo(id string) {
+	s.repo = emptyRepo{}
+}
 
+func (s *lookupScenario) fetch(ctx context.Context, id string) {
+	s.user, s.err = users.NewUserService(s.repo).GetUser(ctx, id)
+}
+
+func (s *lookupScenario) expectNotFound() error {
 	var notFound *users.UserNotFoundError
-	if !errors.As(err, &notFound) {
-		t.Fatalf("expected UserNotFoundError, got %v", err)
+	if !errors.As(s.err, &notFound) {
+		return fmt.Errorf("expected UserNotFoundError, got %v", s.err)
+	}
+	return nil
+}
+
+func InitializeScenario(sc *godog.ScenarioContext) {
+	s := &lookupScenario{}
+	sc.Given(`^a user repository with no user "([^"]*)"$`, s.emptyRepo)
+	sc.When(`^I fetch user "([^"]*)"$`, s.fetch)
+	sc.Then(`^a UserNotFoundError is raised$`, s.expectNotFound)
+}
+
+func TestFeatures(t *testing.T) {
+	suite := godog.TestSuite{
+		ScenarioInitializer: InitializeScenario,
+		Options: &godog.Options{
+			Format:   "pretty",
+			Paths:    []string{"features"},
+			Strict:   true,
+			TestingT: t,
+		},
+	}
+	if suite.Run() != 0 {
+		t.Fatal("feature tests failed")
 	}
 }
 ```
@@ -393,12 +507,24 @@ Run it. In Go the first red is often a compilation failure, and that counts
 not a typo in an import path:
 
 ```console
-$ go test ./internal/users/ -run TestFetchingMissingUserFailsLoudly
+$ go test ./internal/users/
 # example.com/app/internal/users_test [example.com/app/internal/users.test]
-internal/users/lookup_test.go:14:63: undefined: users.User
-internal/users/lookup_test.go:19:15: undefined: users.NewUserService
-internal/users/lookup_test.go:23:22: undefined: users.UserNotFoundError
+internal/users/user_lookup_steps_test.go:17:63: undefined: users.User
+internal/users/user_lookup_steps_test.go:22:13: undefined: users.UserRepository
+...
 FAIL	example.com/app/internal/users [build failed]
+```
+
+When the types already exist and only the behaviour is missing, the red is the
+scenario itself:
+
+```console
+$ go test ./internal/users/
+...
+      Error: expected UserNotFoundError, got <nil>
+1 scenarios (1 failed)
+3 steps (2 passed, 1 failed)
+--- FAIL: TestFeatures (0.00s)
 FAIL
 ```
 
@@ -450,18 +576,21 @@ func (s *UserService) GetUser(ctx context.Context, id string) (*User, error) {
 ```
 
 ```console
-$ go test ./internal/users/ -run TestFetchingMissingUserFailsLoudly
-ok  	example.com/app/internal/users	0.002s
+$ go test -v ./internal/users/
+...
+1 scenarios (1 passed)
+3 steps (3 passed)
+ok  	example.com/app/internal/users	0.005s
 ```
 
-The nil check on `repo` in the constructor is not here yet: no test asks for it.
-It arrives with its own red test in the next cycle. The `err` from `Find` is
-returned rather than left out, because discarding it is banned (see "What NOT
-to do"); its own test, that a repository failure reaches the caller wrapped,
-comes next.
+The nil check on `repo` in the constructor is not here yet: no scenario asks
+for it. It arrives with its own red scenario in the next cycle. The `err` from
+`Find` is returned rather than left out, because discarding it is banned (see
+"What NOT to do"); its own scenario, that a repository failure reaches the
+caller wrapped, comes next.
 
 ### REFACTOR — clean up with the full suite green
 
-Improve names and structure of production and test code, then run the whole
+Improve names and structure of production and step code, then run the whole
 suite with the race detector (`go test -race ./...`) and `go vet ./...`, and
-confirm everything passes before moving to the next behaviour.
+confirm every scenario still passes before moving to the next behaviour.
