@@ -18,10 +18,11 @@ mirroring the section headings below:
 
 - [`examples/typescript.md`](examples/typescript.md)
 - [`examples/python.md`](examples/python.md) — testing examples use Gherkin with [behave](https://behave.readthedocs.io/)
+- [`examples/go.md`](examples/go.md) — testing examples use Gherkin with [godog](https://github.com/cucumber/godog), run by `go test`
 
 **Load only the file for the language you are writing.** If the task is in
 Python, open `examples/python.md` and do not open the others; if it is in
-TypeScript, open `examples/typescript.md`. The pointers under each section below
+TypeScript, open `examples/typescript.md`; if it is in Go, open `examples/go.md`. The pointers under each section below
 ("see the per-language example files") mean *your* language's file only — they
 are not an instruction to read every file. This keeps context small: the base
 guidance is always loaded, but per-language examples load on demand.
@@ -73,6 +74,7 @@ Use the language's standard hard-fail mechanism:
 |------------|------------------------------------------------------------|
 | TypeScript | `throw new Error(...)`                                     |
 | Python     | `raise ValueError(...)` (bad value) / `raise TypeError(...)` (wrong type) |
+| Go         | `panic(...)` for a programmer error; any other failure is a returned `error`, wrapped with `%w`, never discarded |
 
 ---
 
@@ -267,6 +269,7 @@ Use high-level mocking libraries:
 |------------|-------------------------------------------------|
 | TypeScript | Jest (`jest.fn()`, `jest.spyOn()`) / Vitest     |
 | Python     | `unittest.mock` (`Mock`, `MagicMock`, `patch`)  |
+| Go         | Hand-written fakes; `testify/mock` or `go.uber.org/mock` to verify calls |
 
 ---
 
