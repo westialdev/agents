@@ -1,66 +1,63 @@
 ---
 name: parked-ideas
 description: >
-  Keep the human's post-it file (default WHEREIAM.md, alias "WIA"): the human parks an idea
-  or something pending in one sentence, and the agent links it to the context it refers to,
-  so the note still reloads the human's head weeks later. Trigger when the human writes or
-  mentions a note in WHEREIAM.md or "the WIA", says "park this", "note this for later",
-  "I'm pausing / going to sleep / travelling", "where was I", or comes back after a gap.
+  Keep the backlog of parked ideas (default TODO.md): the human's ideas that can wait, and
+  every run, branch or piece of work the agent or its team suggests, parked instead of being
+  started, so nothing displaces the work in progress and nothing is lost; decisions that are
+  the human's alone sit at its foot. Trigger when the human says "park this", "for later",
+  "add it to the TODO", "what's pending", "what's waiting on me"; when the agent is about to
+  suggest or start work the human did not ask for; when a teammate proposes something; or at
+  a pause.
 ---
 
-# Parked ideas — the human's post-its
+# Parked ideas: waiting until called
 
-During a live collaboration the human's head fills with ideas that grow out of the work on the
-table. A pause (sleep, a trip, another project) loses them. So the human parks each one as a
-single sentence in the post-it file (WHEREIAM, "WIA" for short), whenever they need to: at a
-pause, mid-session, any time.
+**The work in progress comes first.** When the human has an idea that can wait, or when you or
+a teammate think of a run worth doing while the human is busy with something else, do not
+start it and do not derail the conversation. Park it here. **The human decides what runs and
+when.** Nothing on this list is scheduled.
 
-**The design is a division of labour. The human's sentence is the anchor; the agent's link is
-the reload.** The human writes only the idea. The agent supplies what makes it readable weeks
-later.
+What is live right now, and what must happen first thing next time, belongs in the WIA (skill
+`where-i-am`, default `WHEREIAM.md`) instead. When a parked item becomes the next thing to do,
+the human moves it there.
 
-## What the agent writes: one `→` link per note, and nothing else
+## Scope: the live branches of the path
 
-Beneath each new sentence, add one quoted block that starts with `→`:
+The list holds the **live branches of the path being followed together**: the human's parked
+ideas, and the alternatives, follow-ups and checks the work has opened and nobody has closed.
+A branch the human rules out stays on the list, struck through with the ruling and its date.
+A "no" is a result.
+
+At the foot, in their own section, sit **DECISIONS WAITING ON YOU**: the standing choices only
+the human can make, such as scope, money, priorities and consent. Keep them visually separate
+from the work above.
+
+## Each item
 
 ```markdown
-**try the same filter on the morning session**
-
-> **→** Context: the evening filter kept 31 of 412 names on 2026-10-27
-> (`doc/studies/2026-10-27-filter.md`). Connects to the open question on fill size. Acting on
-> it takes one rerun of the study with the session switched, about an hour.
+- **Rerun the study on the morning session.** Answers: does the filter's edge survive outside
+  the evening? Cost: one run, about an hour, no paid compute. Waits on: nothing.
+  From: the analyst, 2026-10-27.
 ```
 
-A good link carries:
-- **the numbers that were on the table** when the idea was born, with their source;
-- **what it connects to**: the files, records, decisions or other notes;
-- **what acting on it would take**: the cost, the first step, and anything it waits on.
+- **What it answers.** One question. An item that answers nothing is not a branch.
+- **What it costs**: time, money, compute and the human's attention. Say when it spends
+  something metered.
+- **What it waits on**, if anything.
+- **Where it came from, and when.** The human's own ideas keep the human's wording.
 
-Source every fact you put in a link. A link that misstates the context is worse than none,
-because the human will trust it on return.
+## Lifecycle
 
-## What the agent never does
+- **Done:** strike it through and date it, with a one-line result and where the result lives.
+  **Never delete it.**
+- **Newest at the top** within each section.
+- **Re-verify before re-listing.** When you present the list, check each open item and
+  decision against the current state. An item assumed closed may still be live, and one
+  assumed open may already be done.
+- **Archive, do not prune.** When the file grows unwieldy, move done items to a dated archive
+  file and link it from the top.
 
-- Never writes a note of its own, or suggests one into this file. Agent suggestions belong in
-  the backlog (skill `suggestion-backlog`).
-- Never rewrites, reorders, merges or deletes the human's sentence. It is the anchor.
-- Never adds sections, decisions, state or queues here.
-- Never clears a note. Only the human clears one. Before the human clears a note, check that
-  any substance existing only in its link has a home elsewhere, and offer to move it.
+## When presenting it
 
-## The pause-state block: only on request, deleted on return
-
-If the human asks for one, write a dated **STATE AT PAUSE** block at the top: what is running,
-what each live process will do during the gap, and where everything is committed.
-
-**Delete it the moment the human returns,** after checking that its substance lives elsewhere.
-It is the first thing read on return and the last thing verified, so a stale one is the most
-dangerous text in the project. It can describe a failure that never happened, and send the
-human into a recovery that is not needed.
-
-## On return
-
-1. Read the file top to bottom with the human.
-2. Verify every link against the live state, and say which facts changed.
-3. Delete the pause-state block, if one exists.
-4. Pick up the note the human chooses. The order is the human's.
+Give the human the open items with their costs, and the decisions waiting on them. Recommend an
+order if asked, but start nothing until the human calls it.
