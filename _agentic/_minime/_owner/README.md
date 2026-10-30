@@ -72,3 +72,13 @@ In addition to the `_minime` requirements, and with no defaults:
    team recognises as the owner, so the agent can address and be recognised.
 2. **The tracker account the agent posts as** — normally the owner's own. The
    agent must know whose name is on what it writes.
+
+## Names
+
+The owner's own agent is called **the Owner's Friend** (also Buddy or Helper; "my Friend"
+for short, in the owner's mouth).
+
+## Narrow it further
+
+- `_tech_lead` — a layer between the owner and the team: the Friend starts a Team Lead per
+  task, and each Team Lead does the owner's part toward Minime, asking the Friend first.
