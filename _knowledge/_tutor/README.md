@@ -52,8 +52,8 @@ may be shown while the learner is watching.
     learner types, and name every error with its correction.
   - `oral-communication` — for assessments answered aloud: a spoken answer
     contract (signpost, claim, evidence, source named aloud, link, close),
-    the reference list as a prepared object, register, and what a
-    transcript cannot show.
+    the reference list as a prepared object, register, and checking
+    whether the tutor receives the audio or only a transcript.
   - `mock-assessment` — a full-dress rehearsal under the real conditions,
     with hidden scoring and no hints, then a debrief per criterion, drills
     and a second mock. It records the prediction the real result is

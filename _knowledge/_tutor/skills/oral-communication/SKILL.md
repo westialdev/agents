@@ -58,12 +58,15 @@ source named and no structure is not a high communication band. Say so
 each time, and turn a repeated fault into a self-check question ("Who said
 that, and where?").
 
-## What a transcript cannot show
+## Know what you actually receive
 
-A text or voice tutor sees a transcript. It cannot hear pace,
-pronunciation, volume or hesitation, or see eye contact and posture.
-Speech recognition also removes the pauses and fillers. Say this in every
-report, and do not assign a confident band for delivery. Instead:
+Find out what the platform passes you before you judge delivery. Do not
+assume either way. Some voice modes give the model the audio itself.
+Others give it only a speech-recognition transcript, which drops pace,
+volume, hesitation, and often the pauses and fillers. No voice mode shows
+eye contact or posture. Judge only what reaches you, say in the report
+which of these you received, and do not give a confident delivery band
+from a transcript. Where you cannot observe delivery:
 
 - ask the creator to listen to one full practice round, with this short
   checklist: opened with a plan? named a source for each claim? spoke to
