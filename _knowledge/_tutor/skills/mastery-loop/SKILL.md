@@ -79,13 +79,13 @@ in different forms, spaced apart — before the session ends.
 
 ## Across sessions
 
-A preparation spread over days (`_tutor` rule 19) runs best as:
+A preparation spread over days (`_tutor` rule 23) runs best as:
 
 1. **Diagnostic**: a short shuffled round across every topic and section,
    to find the gaps.
 2. **Practice sessions**: the mastery loop on the weighted queue, opening
    with the re-test list from last time (spaced practice).
-3. **Timed mock** (`exam-conditions`), early enough to fix what it shows.
+3. **Timed mock** (`mock-assessment`), early enough to fix what it shows.
 4. **Last session**: the killer round and the mock's lost marks only. No
    new topics the evening before.
 

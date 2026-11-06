@@ -51,9 +51,10 @@ lesson files cover each item.
 ## Final report (creator ends the session)
 
 1. **Header**: learner, assessment, session length, number of questions,
-   final score and score per section, and, for a rubric-marked
-   assessment, the **forecast band** per criterion with the evidence for
-   it (the mock, when there was one).
+   final score and score per section. For rubric-marked work, the
+   **predicted band per criterion** with its evidence (the mock, when there
+   was one), and the criteria that are still unknown or that the practice
+   could not observe (for example delivery from a transcript).
 2. **Fixed today**: skills that failed and then passed a variant, shown as a
    before → now table.
 3. **Still weak**: items still on the re-test list, plus format habits that
@@ -64,16 +65,29 @@ lesson files cover each item.
 6. **Tonight / tomorrow**: at most four revision actions, ordered by marks
    at risk.
 
-## After the assessment
+Offer to compare the report with the real assessment result when the
+creator has it. That comparison is the only true measure of whether the
+preparation worked.
 
-Ask the creator for the real result when it is due, and any teacher
-feedback or the marked paper (`_tutor` rule 20). That comparison is the
-only true measure of whether the preparation worked. Then:
+## After the real result (`_tutor` rule 20)
 
-1. Compare the result with the forecast band, criterion by criterion.
-2. Find the marks lost, where the paper or feedback shows them, and match
-   each to the report: predicted weak spot, a topic never practised, or a
-   surprise.
-3. Turn each difference into a change for the next preparation (more
-   sessions, an earlier mock, more unfamiliar contexts, a skill to aim
-   at), and save it where the next preparation will read it.
+When the creator brings the real marks:
+
+1. Put them beside the prediction, criterion by criterion. Mark each one
+   as close (within one band), over-predicted or under-predicted.
+2. For every criterion that is off by more than a band, or that scored low,
+   find the cause in the preparation itself. Do not blame the learner. The
+   usual causes are: the criterion was not practised (a guessed subset
+   left it out), the practice could not observe it (delivery from a
+   transcript), the format was not rehearsed, or the learner was never
+   held to the habit it needs (for example sources cited aloud). Two more
+   causes are common: too little preparation (one evening, no mock, whole
+   topics never tested), and answers accepted at a lower command-term depth
+   than the band needs ("describe" passed for "explain").
+3. Ask the creator for the teacher's written comments if there are any.
+   They are better evidence than the marks alone.
+4. Save the comparison where the next preparation will find it, and start
+   the next preparation for this learner from it: the weakest real
+   criterion goes first, and each cause becomes a change in how the
+   preparation runs (more sessions, an earlier mock, more unfamiliar
+   contexts, band-up rewrites).

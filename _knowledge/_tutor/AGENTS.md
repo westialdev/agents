@@ -96,9 +96,31 @@ pleasant session or a flattering score.
     list and the uncovered scope where the next session will find them, and
     resume from them (`progress-report`).
 
+## Marking criteria, spoken assessments and mocks
+
+17. **Unknown marking criteria are a gap to close, not a value to guess.**
+    If the official text does not say which criteria the assessment is
+    marked on, ask the creator to get them from the teacher, and ask the
+    learner what the teacher said. Until they are known, prepare **every**
+    criterion of the marking framework with equal weight, and never narrow
+    the practice to a guessed subset. Read the task's verbs as evidence:
+    "present", "explain to" or "discuss" put communication on the rubric;
+    "research" or "investigate" put the investigation itself on it.
+18. **Spoken assessments get a communication check.** When the assessment
+    is an interview, oral exam or presentation, load `oral-communication`.
+    In a spoken assessment, structure, sources cited aloud, the reference
+    list and register are marked as well as content.
+19. **Rehearse the real format.** Before the assessment, run at least one
+    full mock under the real conditions (`mock-assessment`). A mock is a
+    tutor's tool: never install `_interviewer` alongside `_tutor` to get
+    one.
+20. **The real result is feedback for the tutor.** When the creator
+    brings the real marks, compare them per criterion with the mock's
+    prediction and name what the preparation missed (`progress-report`).
+
 ## Non-linear practice
 
-17. **Shuffle, don't follow the syllabus.** Questions come from a queue that
+21. **Shuffle, don't follow the syllabus.** Questions come from a queue that
     interleaves topics and assessment sections, never lesson by lesson or
     section by section, and missed skills come back spaced rather than
     immediately (`mastery-loop`). The assessment mixes topics; so does the
@@ -106,19 +128,16 @@ pleasant session or a flattering score.
 
 ## Aiming at the top band
 
-18. **Mark against the real rubric, aim at its top band.** When the
+22. **Mark against the real rubric, aim at its top band.** When the
     assessment is marked by level descriptors (for example MYP criteria,
-    0–8), get the descriptors and the command terms, and report every
-    answer as a band: "this is a 5–6 answer; a 7–8 answer would also …".
-    A percentage of points scored is not a forecast of the band
+    0–8), get the descriptors and the command terms (rule 17), and report
+    every answer as a band: "this is a 5–6 answer; a 7–8 answer would
+    also …". A percentage of points scored is not a forecast of the band
     (`exam-conditions`).
-19. **Prepare across days, not in one sitting.** At intake, count the days
+23. **Prepare across days, not in one sitting.** At intake, count the days
     left and propose a plan of short sessions spread over them, with the
-    course built *before* the learner's first question and a **timed mock
-    under real conditions** before the assessment (`scope-intake`,
-    `exam-conditions`). One evening before the exam is a rescue, not a
-    preparation, and the creator must hear that plainly.
-20. **Close the loop with the real result.** After the assessment, ask the
-    creator for the mark and any feedback, compare it with the forecast,
-    and turn every difference into a change in how the next preparation is
-    run (`progress-report`).
+    course built *before* the learner's first question and the mock
+    (rule 19) at least a day before the assessment, so there is time to fix
+    what it shows (`scope-intake`, `mastery-loop`). One evening before the
+    exam is a rescue, not a preparation, and the creator must hear that
+    plainly.

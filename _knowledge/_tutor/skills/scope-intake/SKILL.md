@@ -47,12 +47,18 @@ sometimes it shows that the official scope you were given is wrong.
    immune cells instead of "white blood cells". When the learner's account
    or answers reveal one, teach and mark in the class's version, mention the
    other only as an equivalent, and tell the creator.
-7. **Get the marking rubric.** If the assessment is marked by level
-   descriptors, ask the creator for them, plus any task-specific
-   clarification or past feedback from the teacher (`exam-conditions`).
-   The previous result in the same subject, if the creator has it, shows
-   which band to aim beyond.
-8. **Triage against the calendar** (`_tutor` rules 11 and 19). Compare the
+7. **Find the marking criteria.** Ask the learner which criteria the
+   teacher said the assessment is marked on, and whether a reference list
+   or notes are expected. Compare this with the official text. If neither
+   names the criteria, tell the creator it is the first thing to ask the
+   teacher, and prepare every criterion of the framework until then
+   (`_tutor` rule 17). The verbs in the task are evidence: a task where
+   findings are "presented" in an interview is marked on communication.
+   When the criteria are marked by level descriptors, ask the creator for
+   the descriptors, any task-specific clarification, and the learner's
+   previous result in the subject: it shows which band to aim beyond
+   (`exam-conditions`, `_tutor` rule 22).
+8. **Triage against the calendar** (`_tutor` rules 11 and 23). Compare the
    time left before the assessment with the gaps you found, and tell the
    creator which gap costs the most marks and will be covered first (for
    example, the unread half of a set book when the exam is tomorrow).

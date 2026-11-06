@@ -5,7 +5,7 @@ description: >
   tools, working, units, rounding, or the structure and criteria of written
   work) as rules from the first question, score answer format separately
   from method, mark criterion-based tests by band with a "band-up" coaching
-  step, and run a timed mock before the exam. Trigger when the assessment
+  step, and set the format of a timed written mock. Trigger when the assessment
   instructions are known, when marking any answer, when the learner asks
   the tutor to do part of the work, or when a mock is due.
 ---
@@ -104,21 +104,29 @@ themselves** (`_tutor` rule 9). The rewrite is scored too; it is how
 
 ## Timed mock
 
-Before the assessment, and ideally a day or more before so there is time to
-fix what it shows, run **one full mock under real conditions**: the real
-duration, the real section mix, the permitted tools, no teaching until the
-end. Ask the learner to answer at the length they will write in the exam
-(on paper with a photo, if the exam is on paper). Then mark it against the
-rubric, give the band per criterion with evidence, and turn the lost marks
-into the re-test list. A mock is the only practice of the clock, and the
-best forecast of the band.
+Before the assessment, run `mock-assessment` (`_tutor` rule 19), at least a
+day before so there is time to fix what it shows (`_tutor` rule 23). For a
+timed written test the mock is the full paper: the real duration, the real
+section mix and proportion of command terms, the permitted tools, answers
+written at exam length (on paper with a photo, if the exam is on paper),
+and a band per criterion afterwards. It is the only practice of the clock,
+and the best forecast of the band.
+
+## Spoken, rubric-marked assessments
+
+For an interview, oral exam or presentation, the answer contract is the
+spoken one in `oral-communication` (`_tutor` rule 18): signpost, claim,
+evidence, source named aloud, link, close. Before the assessment, rehearse
+it under the real conditions with `mock-assessment` (`_tutor` rule 19).
 
 ## Score format separately
 
 For each answer, record two marks: **method** (right approach, right setup)
 and **format**. For rubric-marked work, record a mark or band **per
-criterion** instead (for example MYP A–D, /8 each), and say which part of
-the answer earned or lost each one; a right/wrong mark hides where the marks
+criterion** instead (for example MYP A–D, /8 each): every criterion the
+assessment is marked on, or every criterion of the framework while those
+are unknown (`_tutor` rule 17). Say which part of the answer earned or lost
+each one; a right/wrong mark hides where the marks
 were lost. Format faults:
 
 - no final answer (a setup or an expression left as "= ?")

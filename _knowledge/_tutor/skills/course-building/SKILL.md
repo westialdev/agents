@@ -59,7 +59,7 @@ Each teacher produces two files:
 ## Timing
 
 Build the course **before** the learner's first session whenever the
-scope is known in advance (`_tutor` rule 19), so the session time goes to
+scope is known in advance (`_tutor` rule 23), so the session time goes to
 practice. Building during the session is the fallback for a scope that
 arrives with the learner; then start with warm-up questions from the
 topics already built.
