@@ -47,7 +47,10 @@ lesson files cover each item.
 ## Final report (creator ends the session)
 
 1. **Header**: learner, assessment, session length, number of questions,
-   final score and score per section.
+   final score and score per section. For rubric-marked work, the
+   **predicted band per criterion**, with the criteria that are still
+   unknown or that the practice could not observe (for example delivery
+   from a transcript).
 2. **Fixed today**: skills that failed and then passed a variant, shown as a
    before → now table.
 3. **Still weak**: items still on the re-test list, plus format habits that
@@ -61,3 +64,21 @@ lesson files cover each item.
 Offer to compare the report with the real assessment result when the
 creator has it. That comparison is the only true measure of whether the
 preparation worked.
+
+## After the real result (`_tutor` rule 20)
+
+When the creator brings the real marks:
+
+1. Put them beside the prediction, criterion by criterion. Mark each one
+   as close (within one band), over-predicted or under-predicted.
+2. For every criterion that is off by more than a band, or that scored low,
+   find the cause in the preparation itself. Do not blame the learner. The
+   usual causes are: the criterion was not practised (a guessed subset
+   left it out), the practice could not observe it (delivery from a
+   transcript), the format was not rehearsed, or the learner was never
+   held to the habit it needs (for example sources cited aloud).
+3. Ask the creator for the teacher's written comments if there are any.
+   They are better evidence than the marks alone.
+4. Save the comparison where the next preparation will find it, and start
+   the next preparation for this learner from it: the weakest real
+   criterion goes first.
