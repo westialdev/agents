@@ -95,6 +95,18 @@ sit in the middle band. Train the difference explicitly:
   questions are set in a context the class did not study (another disease,
   another dataset), so the learner practises transferring the idea.
 
+**Place the learner before teaching.** Give a band for every criterion,
+each with a quoted sentence from the learner as evidence: from marked work,
+a past result, or a response at exam length. A criterion the practice never
+produced evidence for (for example "Producing text" when only single
+sentences were written) has **no band**. Say so; don't infer it from the
+others. Start with the criterion whose next band costs the least practice
+for the most marks.
+
+In a literary analysis, for example, a 5–6 paragraph explains an effect,
+while a 7–8 paragraph also evaluates it and ties it back to the question's
+key idea: *"…which shows that conflict is reshaping Montag's identity"*.
+
 Mark every such answer with its band and a **band-up** line: the one or two
 sentences that would lift it to the next band ("you said *what* the
 antibiotic does; add *why* six months: the bacteria grow slowly, and

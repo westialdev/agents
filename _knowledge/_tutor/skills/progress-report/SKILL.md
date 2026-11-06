@@ -74,7 +74,8 @@ preparation worked.
 When the creator brings the real marks:
 
 1. Put them beside the prediction, criterion by criterion. Mark each one
-   as close (within one band), over-predicted or under-predicted.
+   as close (within one band), over-predicted or under-predicted. Ask for
+   any criterion the creator did not report.
 2. For every criterion that is off by more than a band, or that scored low,
    find the cause in the preparation itself. Do not blame the learner. The
    usual causes are: the criterion was not practised (a guessed subset
@@ -91,3 +92,8 @@ When the creator brings the real marks:
    criterion goes first, and each cause becomes a change in how the
    preparation runs (more sessions, an earlier mock, more unfamiliar
    contexts, band-up rewrites).
+5. **Update the learner profile**: a short record kept outside any single
+   preparation (for example a memory shared across the creator's
+   preparations), with results per criterion over time, persistent habits,
+   and what worked. The next preparation reads it, even in another
+   subject (`scope-intake`).

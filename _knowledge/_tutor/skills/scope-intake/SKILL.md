@@ -57,7 +57,13 @@ sometimes it shows that the official scope you were given is wrong.
    When the criteria are marked by level descriptors, ask the creator for
    the descriptors, any task-specific clarification, and the learner's
    previous result in the subject: it shows which band to aim beyond
-   (`exam-conditions`, `_tutor` rule 22).
+   (`exam-conditions`, `_tutor` rule 22). Also ask for marked past work
+   with the teacher's comments and any exemplars: they show where the real
+   marker places the learner. Ask again after the first session if
+   nothing arrived.
+   If an earlier preparation left a **learner profile**
+   (`progress-report`), read it too, even from another subject: habits
+   such as capitalisation or tense carry over.
 8. **Triage against the calendar** (`_tutor` rules 11 and 23). Compare the
    time left before the assessment with the gaps you found, and tell the
    creator which gap costs the most marks and will be covered first (for

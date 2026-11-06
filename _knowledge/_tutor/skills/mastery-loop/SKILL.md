@@ -89,6 +89,17 @@ A preparation spread over days (`_tutor` rule 23) runs best as:
 4. **Last session**: the killer round and the mock's lost marks only. No
    new topics the evening before.
 
+## The written-work ladder
+
+For written assessments, the length of the answers climbs too:
+**sentence → paragraph → full timed response**. Single sentences fix single
+skills cheaply, but structure (does the argument build?), stamina and
+proofreading under time pressure only show up in a full response, and a
+criterion such as "Organizing" can't be marked without one. Move up a rung
+once the skills of the rung below hold; don't stay on sentences because
+they score well. The top rung is the timed mock (`exam-conditions`), with
+the proofreading minutes in its time plan (`writing-accuracy`).
+
 ## Learner-led drills
 
 A learner may skip the plan and ask for a drill directly ("give me a

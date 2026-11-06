@@ -53,6 +53,29 @@ Word choice that is correct but weak ("very", repeated words) is
 **not** a grammar error. Suggest an upgrade in the teaching part of an
 answer's feedback, not in the language check.
 
+## Self-check first
+
+In the exam, nobody points at the mistakes (`_tutor` rule 24). For every
+practice **answer** (not asides), before the language check:
+
+1. Ask the learner to proofread it once against their **personal checklist**
+   (below) and resend any corrections.
+2. Then run the language check, and mark each error as **found** (the
+   learner fixed it) or **missed**.
+3. Track the found/missed ratio. A rising ratio is the habit forming; a
+   falling one means the checklist needs a new line.
+
+Under time pressure (quick-fire rounds) the self-check may be skipped, but
+never in a mock.
+
+## Personal checklist
+
+From the habits (below), keep a checklist of at most five lines in the
+learner's own words, for example *"Names get a capital: Montag, Clarisse"*,
+*"Book events in the present: realises, not realised"*. Save it in the
+learner-visible course folder as a revision card. The learner uses it in the
+last minutes of every mock and of the real exam.
+
 ## How to report it
 
 Reply to the content first: answer the question, or mark the answer. Then
@@ -91,4 +114,5 @@ Rules for the block:
   before moving on. A habit leaves the list after three clean messages in a
   row in which the pattern could have appeared.
 - Report the habits in the final report under "format habits", with
-  examples quoted from the learner's own messages.
+  examples quoted from the learner's own messages, and keep the personal
+  checklist up to date with them.

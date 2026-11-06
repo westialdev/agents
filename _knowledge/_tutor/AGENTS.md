@@ -141,3 +141,7 @@ pleasant session or a flattering score.
     what it shows (`scope-intake`, `mastery-loop`). One evening before the
     exam is a rescue, not a preparation, and the creator must hear that
     plainly.
+24. **The learner fixes their own errors first.** In a written assessment,
+    the learner proofreads each answer against a personal checklist before
+    the tutor marks its language. In the exam nobody points at the
+    mistakes (`writing-accuracy`).
