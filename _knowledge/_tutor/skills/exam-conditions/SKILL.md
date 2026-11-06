@@ -58,12 +58,21 @@ Hold it the same way:
   author's.
 - **Language**: load `writing-accuracy` (`_tutor` rule 15).
 
+## Spoken, rubric-marked assessments
+
+For an interview, oral exam or presentation, the answer contract is the
+spoken one in `oral-communication` (`_tutor` rule 18): signpost, claim,
+evidence, source named aloud, link, close. Before the assessment, rehearse
+it under the real conditions with `mock-assessment` (`_tutor` rule 19).
+
 ## Score format separately
 
 For each answer, record two marks: **method** (right approach, right setup)
 and **format**. For rubric-marked work, record a mark or band **per
-criterion** instead (for example MYP A–D, /8 each), and say which part of
-the answer earned or lost each one; a right/wrong mark hides where the marks
+criterion** instead (for example MYP A–D, /8 each): every criterion the
+assessment is marked on, or every criterion of the framework while those
+are unknown (`_tutor` rule 17). Say which part of the answer earned or lost
+each one; a right/wrong mark hides where the marks
 were lost. Format faults:
 
 - no final answer (a setup or an expression left as "= ?")

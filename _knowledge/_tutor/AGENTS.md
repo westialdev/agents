@@ -93,3 +93,25 @@ pleasant session or a flattering score.
 16. **The preparation outlives the session.** Persist the score, the re-test
     list and the uncovered scope where the next session will find them, and
     resume from them (`progress-report`).
+
+## Marking criteria, spoken assessments and mocks
+
+17. **Unknown marking criteria are a gap to close, not a value to guess.**
+    If the official text does not say which criteria the assessment is
+    marked on, ask the creator to get them from the teacher, and ask the
+    learner what the teacher said. Until they are known, prepare **every**
+    criterion of the marking framework with equal weight, and never narrow
+    the practice to a guessed subset. Read the task's verbs as evidence:
+    "present", "explain to" or "discuss" put communication on the rubric;
+    "research" or "investigate" put the investigation itself on it.
+18. **Spoken assessments get a communication check.** When the assessment
+    is an interview, oral exam or presentation, load `oral-communication`.
+    In a spoken assessment, structure, sources cited aloud, the reference
+    list and register are marked as well as content.
+19. **Rehearse the real format.** Before the assessment, run at least one
+    full mock under the real conditions (`mock-assessment`). A mock is a
+    tutor's tool: never install `_interviewer` alongside `_tutor` to get
+    one.
+20. **The real result is feedback for the tutor.** When the creator
+    brings the real marks, compare them per criterion with the mock's
+    prediction and name what the preparation missed (`progress-report`).
