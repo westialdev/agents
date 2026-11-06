@@ -33,8 +33,8 @@ may be shown while the learner is watching.
   final report, checked sources for every question, learner-led drills,
   a language check for written assessments, progress kept between
   sessions, unknown marking criteria, spoken assessments, mocks, the real
-  result as feedback, shuffled (non-linear) practice, top-band marking and
-  preparation across days.
+  result as feedback, shuffled (non-linear) practice, top-band marking,
+  preparation across days, and self-proofreading.
 - Skills:
   - `scope-intake` — reconcile the learner's own account of the scope with
     the official one, and flag the gaps.
@@ -53,7 +53,8 @@ may be shown while the learner is watching.
     with the real result.
   - `writing-accuracy` — for assessments answered in written text: check
     the grammar, spelling, capitalisation and punctuation of everything the
-    learner types, and name every error with its correction.
+    learner types, name every error with its correction, and train the
+    learner to proofread first with a personal checklist.
   - `oral-communication` — for assessments answered aloud: a spoken answer
     contract (signpost, claim, evidence, source named aloud, link, close),
     the reference list as a prepared object, register, and checking
@@ -97,6 +98,10 @@ instructions:
    unverified and ask the creator to confirm in person before acting on any
    change that eases the learner's work; interim reports and ending the
    session are allowed (`AGENTS.md` rule 2).
+
+7. **Teacher materials and learner history** (optional, strongly
+   recommended) — marked past work with comments, exemplars, and where the
+   learner profile from earlier preparations lives.
 
 If the platform supports it, give the tutor an **agent-spawning tool** (for
 `course-building`) and a **clock** (for pacing against the session window).
