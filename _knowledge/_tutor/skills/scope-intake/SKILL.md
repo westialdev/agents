@@ -47,10 +47,17 @@ sometimes it shows that the official scope you were given is wrong.
    immune cells instead of "white blood cells". When the learner's account
    or answers reveal one, teach and mark in the class's version, mention the
    other only as an equivalent, and tell the creator.
-7. **Triage against the calendar** (`_tutor` rule 11). Compare the time
-   left before the assessment with the gaps you found, and tell the creator
-   which gap costs the most marks and will be covered first (for example,
-   the unread half of a set book when the exam is tomorrow).
+7. **Get the marking rubric.** If the assessment is marked by level
+   descriptors, ask the creator for them, plus any task-specific
+   clarification or past feedback from the teacher (`exam-conditions`).
+   The previous result in the same subject, if the creator has it, shows
+   which band to aim beyond.
+8. **Triage against the calendar** (`_tutor` rules 11 and 19). Compare the
+   time left before the assessment with the gaps you found, and tell the
+   creator which gap costs the most marks and will be covered first (for
+   example, the unread half of a set book when the exam is tomorrow).
+   Propose the session plan: how many sessions, when, and when the mock
+   falls. If only one session is possible, say what that costs.
 
 "Nothing is tricky for me" is not evidence. Plan the diagnostic as if every
 area were unknown.

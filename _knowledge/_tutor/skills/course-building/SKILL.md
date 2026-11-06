@@ -47,6 +47,23 @@ Each teacher produces two files:
    - the **source** of every fact and quotation it relies on (chapter,
      page, section).
 
+   For a criterion-marked test (`exam-conditions`), each question also
+   carries its **command term** and marks, and the bank adds:
+   - a **top-band model answer** next to a **middle-band answer** to the
+     same question, with the sentence that makes the difference;
+   - **unfamiliar-context** questions for at least a third of the apply and
+     analyse items;
+   - a **mock paper**: a full-length mix of sections in the real
+     proportions, built from questions not used in practice.
+
+## Timing
+
+Build the course **before** the learner's first session whenever the
+scope is known in advance (`_tutor` rule 19), so the session time goes to
+practice. Building during the session is the fallback for a scope that
+arrives with the learner; then start with warm-up questions from the
+topics already built.
+
 ## Verification
 
 Every number in the lessons and banks must be **computed, not recalled**.

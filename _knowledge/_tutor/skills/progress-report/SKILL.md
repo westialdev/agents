@@ -19,8 +19,8 @@ After every marked answer, show one line:
 When questions carry several marks, count **marks** rather than questions
 ("21/36 marks"), so a half-right explanation shows as half-right.
 
-For rubric-marked written work, show the latest band per criterion and the
-open habits instead, for example:
+For rubric-marked work, written or criterion-marked tests, show the
+latest band per criterion and the open habits instead, for example:
 
 > 📊 Paragraph 3: A 5 · B 4 · C 4 · D 5 (/8) · Habits: past tense, "when"
 
@@ -51,7 +51,9 @@ lesson files cover each item.
 ## Final report (creator ends the session)
 
 1. **Header**: learner, assessment, session length, number of questions,
-   final score and score per section.
+   final score and score per section, and, for a rubric-marked
+   assessment, the **forecast band** per criterion with the evidence for
+   it (the mock, when there was one).
 2. **Fixed today**: skills that failed and then passed a variant, shown as a
    before → now table.
 3. **Still weak**: items still on the re-test list, plus format habits that
@@ -62,6 +64,16 @@ lesson files cover each item.
 6. **Tonight / tomorrow**: at most four revision actions, ordered by marks
    at risk.
 
-Offer to compare the report with the real assessment result when the
-creator has it. That comparison is the only true measure of whether the
-preparation worked.
+## After the assessment
+
+Ask the creator for the real result when it is due, and any teacher
+feedback or the marked paper (`_tutor` rule 20). That comparison is the
+only true measure of whether the preparation worked. Then:
+
+1. Compare the result with the forecast band, criterion by criterion.
+2. Find the marks lost, where the paper or feedback shows them, and match
+   each to the report: predicted weak spot, a topic never practised, or a
+   surprise.
+3. Turn each difference into a change for the next preparation (more
+   sessions, an earlier mock, more unfamiliar contexts, a skill to aim
+   at), and save it where the next preparation will read it.

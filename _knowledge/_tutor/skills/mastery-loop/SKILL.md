@@ -5,9 +5,9 @@ description: >
   mixes topics and assessment sections, mark the attempt, teach the
   correction, re-test failed skills with spaced variants, raise difficulty
   on success, switch to quick-fire rounds for breadth when time is short,
-  and close with a killer round of every previously failed item. Trigger on every
-  turn of a tutoring session once the course exists: "next question", "I'm
-  ready", a learner's answer.
+  and close with a killer round of every previously failed item. Trigger
+  on every turn of a tutoring session once the course exists: "next
+  question", "I'm ready", a learner's answer.
 ---
 
 # The mastery loop
@@ -44,6 +44,12 @@ Why it matters:
 Keep the queue in the private progress file (`progress-report`) so the
 next session continues the same shuffle.
 
+Shuffled does not mean equal. **Weight the queue** toward what the exam
+rewards most: a teacher's "likely on the test" hint, the sections where the
+learner scores lowest, and the top-band skills (explain, apply to the
+unfamiliar, evaluate). A hinted topic must be **mastered** — right twice,
+in different forms, spaced apart — before the session ends.
+
 ## Each turn
 
 1. **Ask**: one question, or a short batch in quick-fire mode, with the
@@ -63,9 +69,25 @@ next session continues the same shuffle.
      miss.
    - On a **hit**, take the next question from the shuffled queue, which is
      on a different topic. Raise that topic's level for its next turn.
+   - On a **middle-band answer** to an explain, apply or evaluate question
+     (right idea, not enough depth), give the band-up line and ask for a
+     rewrite before moving on (`exam-conditions`). Depth is the skill
+     being practised, so a correct but shallow answer is not a hit.
    - If an incomplete message looks accidentally cut off, ask the learner to
      finish it. Do not mark it.
 5. **Update the score line** (`progress-report`).
+
+## Across sessions
+
+A preparation spread over days (`_tutor` rule 19) runs best as:
+
+1. **Diagnostic**: a short shuffled round across every topic and section,
+   to find the gaps.
+2. **Practice sessions**: the mastery loop on the weighted queue, opening
+   with the re-test list from last time (spaced practice).
+3. **Timed mock** (`exam-conditions`), early enough to fix what it shows.
+4. **Last session**: the killer round and the mock's lost marks only. No
+   new topics the evening before.
 
 ## Learner-led drills
 
@@ -80,16 +102,21 @@ a learner who asks for practice is engaged. But (`_tutor` rule 14):
 
 ## Difficulty
 
-Start each topic at the applied level. Raise its level after a correct
-answer and lower it after a miss. The shuffle decides *which* topic comes
-next; the difficulty rule decides *how hard* that topic's next question is.
+Difficulty has two axes: the topic's level, and the command term
+(state → describe → explain → evaluate). Climb both. Start each topic at
+the applied level. Raise its level after a correct answer and lower it
+after a miss. The shuffle decides *which* topic comes next; the difficulty
+rule decides *how hard* that topic's next question is.
 
 ## Quick-fire mode
 
 When the session window is short or the creator asks for more coverage,
 switch to batches of three short questions, each from a different topic and,
-where possible, a different section, each answerable in a line. Coverage per minute rises a lot. The format rules still apply:
-the final number and the unit are still required.
+where possible, a different section, each answerable in a line. Coverage
+per minute rises a lot. The format rules still apply: the final number and
+the unit are still required. Quick-fire trains breadth, not depth: when
+the exam rewards explanations, keep every third turn a full explain or
+evaluate question, so the session does not end with one-line habits.
 
 ## Re-test list
 

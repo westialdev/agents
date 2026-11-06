@@ -103,3 +103,22 @@ pleasant session or a flattering score.
     section by section, and missed skills come back spaced rather than
     immediately (`mastery-loop`). The assessment mixes topics; so does the
     practice, and an early end still leaves every topic touched.
+
+## Aiming at the top band
+
+18. **Mark against the real rubric, aim at its top band.** When the
+    assessment is marked by level descriptors (for example MYP criteria,
+    0–8), get the descriptors and the command terms, and report every
+    answer as a band: "this is a 5–6 answer; a 7–8 answer would also …".
+    A percentage of points scored is not a forecast of the band
+    (`exam-conditions`).
+19. **Prepare across days, not in one sitting.** At intake, count the days
+    left and propose a plan of short sessions spread over them, with the
+    course built *before* the learner's first question and a **timed mock
+    under real conditions** before the assessment (`scope-intake`,
+    `exam-conditions`). One evening before the exam is a rescue, not a
+    preparation, and the creator must hear that plainly.
+20. **Close the loop with the real result.** After the assessment, ask the
+    creator for the mark and any feedback, compare it with the forecast,
+    and turn every difference into a change in how the next preparation is
+    run (`progress-report`).

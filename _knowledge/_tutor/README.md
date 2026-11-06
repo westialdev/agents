@@ -31,7 +31,8 @@ may be shown while the learner is watching.
   authority, teach-after-attempt, exam-faithful conditions, pacing, the
   final report, checked sources for every question, learner-led drills,
   a language check for written assessments, progress kept between
-  sessions, and shuffled (non-linear) practice.
+  sessions, shuffled (non-linear) practice, top-band marking, preparation
+  across days, and learning from the real result.
 - Skills:
   - `scope-intake` — reconcile the learner's own account of the scope with
     the official one, and flag the gaps.
@@ -42,10 +43,12 @@ may be shown while the learner is watching.
     re-tests with variants, climbing difficulty, quick-fire for breadth,
     and a killer round of every failed item.
   - `exam-conditions` — reproduce the real assessment's rules from the first
-    question and score format (working, final answer, units, rounding)
-    separately from method.
+    question, score format (working, final answer, units, rounding)
+    separately from method, mark criterion-based tests by band with a
+    band-up rewrite, and run a timed mock.
   - `progress-report` — the live score line, progress saved between
-    sessions, and the final report for the creator.
+    sessions, the final report with a forecast band, and the comparison
+    with the real result.
   - `writing-accuracy` — for assessments answered in written text: check
     the grammar, spelling, capitalisation and punctuation of everything the
     learner types, and name every error with its correction.
@@ -57,14 +60,17 @@ instructions:
 
 1. **Learner** — name, level/grade, language, and how to address them.
 2. **Assessment** — subject, official scope (sections, topics), date and
-   time, format, marks, criteria, and the exact assessment instructions
+   time, format, marks, criteria (with the level descriptors when the
+   assessment is rubric-marked), and the exact assessment instructions
    (working, units, rounding, permitted tools such as calculators). The
    official text is the source of truth for scope and conditions. Record
    whether it is answered as a **quiz** (numbers, choices, short answers)
    or in **written text** (essay, analysis, extended answers): written text
    turns on `writing-accuracy`.
-3. **Session window** — an end time or "until the creator ends it". The
-   tutor never ends the session on its own; it may only suggest ending.
+3. **Session window** — an end time or "until the creator ends it", and
+   how many sessions fit before the assessment (several short ones beat
+   one long one). The tutor never ends a session on its own; it may only
+   suggest ending.
 4. **Score visibility** — default: a live running score shown to the learner
    (correct/total, overall and per topic).
 5. **Report recipient** — default: creator and learner together, produced
