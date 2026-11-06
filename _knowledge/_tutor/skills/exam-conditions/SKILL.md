@@ -3,9 +3,11 @@ name: exam-conditions
 description: >
   Make practice match the real assessment: take its instructions (permitted
   tools, working, units, rounding, or the structure and criteria of written
-  work) as rules from the first question, and score answer format separately
-  from method so format habits get fixed before the exam. Trigger when the assessment instructions are known, when marking any
-  answer, or when the learner asks the tutor to do part of the work.
+  work) as rules from the first question, score answer format separately
+  from method, mark criterion-based tests by band with a "band-up" coaching
+  step, and set the format of a timed written mock. Trigger when the assessment
+  instructions are known, when marking any answer, when the learner asks
+  the tutor to do part of the work, or when a mock is due.
 ---
 
 # Assessment conditions
@@ -57,6 +59,58 @@ Hold it the same way:
   original passages in a similar style, clearly labelled as not the
   author's.
 - **Language**: load `writing-accuracy` (`_tutor` rule 15).
+
+## Criterion-marked tests: aim at the top band
+
+Many school tests (MYP sciences Criterion A, for example) are marked with
+**level descriptors**, not by adding up points. The bands usually differ in
+*depth* and *novelty*, not in how many facts the learner knows: a middle
+band can describe and apply in familiar situations, while the top band
+explains with the mechanism, applies to **unfamiliar** situations and makes
+**judgments supported by data**. A learner who knows the content can still
+sit in the middle band. Train the difference explicitly:
+
+- **Get the descriptors.** Ask the creator for the criterion's level
+  descriptors and any task-specific clarification the teacher shared. If
+  there are none, use the official framework's descriptors for the
+  learner's year and say that you did.
+- **Command terms decide the depth.** State → describe → explain →
+  evaluate are different jobs. Put the command term at the start of every
+  question, exactly as the exam would.
+- **The explain chain** is the answer contract for an "explain" question:
+
+  > claim → **because** (the mechanism, with the scientific term) →
+  > **so** (the consequence) → evidence (a figure quoted from the data,
+  > with its unit)
+
+  An answer that stops at the claim is a "describe" answer, whatever its
+  length.
+- **One point per mark.** A 3-mark question needs three distinct scientific
+  points. Before answering, the learner counts the marks and plans the
+  points.
+- **Evaluate = both sides + a judgment.** Strengths, limitations (sample
+  size, missing control, correlation versus cause), then a conclusion that
+  quotes the data.
+- **Unfamiliar situations.** At least a third of the apply and analyse
+  questions are set in a context the class did not study (another disease,
+  another dataset), so the learner practises transferring the idea.
+
+Mark every such answer with its band and a **band-up** line: the one or two
+sentences that would lift it to the next band ("you said *what* the
+antibiotic does; add *why* six months: the bacteria grow slowly, and
+survivors become resistant"). Then the learner **rewrites the answer
+themselves** (`_tutor` rule 9). The rewrite is scored too; it is how
+"describe" turns into "explain".
+
+## Timed mock
+
+Before the assessment, run `mock-assessment` (`_tutor` rule 19), at least a
+day before so there is time to fix what it shows (`_tutor` rule 23). For a
+timed written test the mock is the full paper: the real duration, the real
+section mix and proportion of command terms, the permitted tools, answers
+written at exam length (on paper with a photo, if the exam is on paper),
+and a band per criterion afterwards. It is the only practice of the clock,
+and the best forecast of the band.
 
 ## Spoken, rubric-marked assessments
 

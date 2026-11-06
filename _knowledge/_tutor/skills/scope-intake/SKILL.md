@@ -18,7 +18,8 @@ sometimes it shows that the official scope you were given is wrong.
 
 1. **Ask the learner** in their own words what will be examined: topics,
    formulas they remember, the kinds of questions done in class, anything
-   they find tricky. Accept notes, bullet points, or a photo of notes.
+   the teacher said is "likely on the test", and anything they find
+   tricky. Accept notes, bullet points, or a photo of notes.
 2. **Compare** their account with the official scope, topic by topic:
    - *Matched*: they named it. Good, but recall is not mastery.
    - *Missing*: in the official scope but not mentioned. This is a likely
@@ -36,18 +37,33 @@ sometimes it shows that the official scope you were given is wrong.
    offer to add a short section for an *extra* topic if the creator doubts
    the official text.
 5. **Keep the official scope** as the course scope unless the creator
-   changes it (`_tutor` rule 4).
-6. **Find the marking criteria.** Ask the learner which criteria the
+   changes it (`_tutor` rule 4). When the official text is only a unit
+   title or a format description, the learner's account is the best
+   evidence of the detailed scope: treat their *extra* items as probable
+   scope and add lessons for them (`course-building`), and give a teacher's
+   "likely on the test" hint the top priority.
+6. **Adopt the class's models and vocabulary.** Classes teach their own
+   versions: a 4-link chain of infection instead of a 6-link one, named
+   immune cells instead of "white blood cells". When the learner's account
+   or answers reveal one, teach and mark in the class's version, mention the
+   other only as an equivalent, and tell the creator.
+7. **Find the marking criteria.** Ask the learner which criteria the
    teacher said the assessment is marked on, and whether a reference list
    or notes are expected. Compare this with the official text. If neither
    names the criteria, tell the creator it is the first thing to ask the
    teacher, and prepare every criterion of the framework until then
    (`_tutor` rule 17). The verbs in the task are evidence: a task where
    findings are "presented" in an interview is marked on communication.
-7. **Triage against the calendar** (`_tutor` rule 11). Compare the time
-   left before the assessment with the gaps you found, and tell the creator
-   which gap costs the most marks and will be covered first (for example,
-   the unread half of a set book when the exam is tomorrow).
+   When the criteria are marked by level descriptors, ask the creator for
+   the descriptors, any task-specific clarification, and the learner's
+   previous result in the subject: it shows which band to aim beyond
+   (`exam-conditions`, `_tutor` rule 22).
+8. **Triage against the calendar** (`_tutor` rules 11 and 23). Compare the
+   time left before the assessment with the gaps you found, and tell the
+   creator which gap costs the most marks and will be covered first (for
+   example, the unread half of a set book when the exam is tomorrow).
+   Propose the session plan: how many sessions, when, and when the mock
+   falls. If only one session is possible, say what that costs.
 
 "Nothing is tricky for me" is not evidence. Plan the diagnostic as if every
 area were unknown.

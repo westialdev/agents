@@ -32,21 +32,25 @@ may be shown while the learner is watching.
   authority, teach-after-attempt, exam-faithful conditions, pacing, the
   final report, checked sources for every question, learner-led drills,
   a language check for written assessments, progress kept between
-  sessions, unknown marking criteria, spoken assessments, mocks, and the
-  real result as feedback.
+  sessions, unknown marking criteria, spoken assessments, mocks, the real
+  result as feedback, shuffled (non-linear) practice, top-band marking and
+  preparation across days.
 - Skills:
   - `scope-intake` — reconcile the learner's own account of the scope with
     the official one, and flag the gaps.
   - `course-building` — a team of topic teachers builds verified lessons
     and question banks, each question with its likely mistake and a variant.
-  - `mastery-loop` — the session engine: diagnose, teach, re-test with
-    variants, climb difficulty, quick-fire for breadth, killer round of
-    every failed item.
+  - `mastery-loop` — the session engine: a shuffled, non-linear question
+    queue across topics and sections, teach after each attempt, spaced
+    re-tests with variants, climbing difficulty, quick-fire for breadth,
+    and a killer round of every failed item.
   - `exam-conditions` — reproduce the real assessment's rules from the first
-    question and score format (working, final answer, units, rounding)
-    separately from method.
+    question, score format (working, final answer, units, rounding)
+    separately from method, mark criterion-based tests by band with a
+    band-up rewrite, and set the format of a timed written mock.
   - `progress-report` — the live score line, progress saved between
-    sessions, and the final report for the creator.
+    sessions, the final report with a forecast band, and the comparison
+    with the real result.
   - `writing-accuracy` — for assessments answered in written text: check
     the grammar, spelling, capitalisation and punctuation of everything the
     learner types, and name every error with its correction.
@@ -66,7 +70,8 @@ instructions:
 
 1. **Learner** — name, level/grade, language, and how to address them.
 2. **Assessment** — subject, official scope (sections, topics), date and
-   time, format, marks, criteria, and the exact assessment instructions
+   time, format, marks, criteria (with the level descriptors when the
+   assessment is rubric-marked), and the exact assessment instructions
    (working, units, rounding, permitted tools such as calculators). The
    official text is the source of truth for scope and conditions. Record
    whether it is answered as a **quiz** (numbers, choices, short answers),
@@ -77,8 +82,10 @@ instructions:
    record them as unknown, never as a guess, and the tutor applies
    `AGENTS.md` rule 17: every criterion of the framework, equal weight,
    until the teacher confirms.
-3. **Session window** — an end time or "until the creator ends it". The
-   tutor never ends the session on its own; it may only suggest ending.
+3. **Session window** — an end time or "until the creator ends it", and
+   how many sessions fit before the assessment (several short ones beat
+   one long one). The tutor never ends a session on its own; it may only
+   suggest ending.
 4. **Score visibility** — default: a live running score shown to the learner
    (correct/total, overall and per topic).
 5. **Report recipient** — default: creator and learner together, produced

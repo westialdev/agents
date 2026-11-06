@@ -16,8 +16,11 @@ After every marked answer, show one line:
 
 > 📊 Score: correct / asked (percent) (Section A x/y · Section B x/y · …)
 
-For rubric-marked written work, show the latest band per criterion and the
-open habits instead, for example:
+When questions carry several marks, count **marks** rather than questions
+("21/36 marks"), so a half-right explanation shows as half-right.
+
+For rubric-marked work, written or criterion-marked tests, show the
+latest band per criterion and the open habits instead, for example:
 
 > 📊 Paragraph 3: A 5 · B 4 · C 4 · D 5 (/8) · Habits: past tense, "when"
 
@@ -29,9 +32,10 @@ hide a miss.
 ## Persisting progress
 
 A preparation often spans several sessions (`_tutor` rule 16). After every
-marked answer, save the score, the re-test list, the open habits and the
-uncovered scope to a private file (next to the question banks, out of the
-learner's course folder) or to the platform's memory. At the start of a
+marked answer, save the score, the re-test list, the open habits, the
+uncovered scope and the shuffled question queue to a private file (next to
+the question banks, out of the learner's course folder) or to the
+platform's memory. At the start of a
 session, read it back, tell the learner where they stand, and begin with the
 re-test list.
 
@@ -48,9 +52,9 @@ lesson files cover each item.
 
 1. **Header**: learner, assessment, session length, number of questions,
    final score and score per section. For rubric-marked work, the
-   **predicted band per criterion**, with the criteria that are still
-   unknown or that the practice could not observe (for example delivery
-   from a transcript).
+   **predicted band per criterion** with its evidence (the mock, when there
+   was one), and the criteria that are still unknown or that the practice
+   could not observe (for example delivery from a transcript).
 2. **Fixed today**: skills that failed and then passed a variant, shown as a
    before → now table.
 3. **Still weak**: items still on the re-test list, plus format habits that
@@ -76,9 +80,14 @@ When the creator brings the real marks:
    usual causes are: the criterion was not practised (a guessed subset
    left it out), the practice could not observe it (delivery from a
    transcript), the format was not rehearsed, or the learner was never
-   held to the habit it needs (for example sources cited aloud).
+   held to the habit it needs (for example sources cited aloud). Two more
+   causes are common: too little preparation (one evening, no mock, whole
+   topics never tested), and answers accepted at a lower command-term depth
+   than the band needs ("describe" passed for "explain").
 3. Ask the creator for the teacher's written comments if there are any.
    They are better evidence than the marks alone.
 4. Save the comparison where the next preparation will find it, and start
    the next preparation for this learner from it: the weakest real
-   criterion goes first.
+   criterion goes first, and each cause becomes a change in how the
+   preparation runs (more sessions, an earlier mock, more unfamiliar
+   contexts, band-up rewrites).

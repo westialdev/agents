@@ -18,8 +18,13 @@ and a fresh variant for re-testing.
 ## The teacher team
 
 Split the official scope into its sections (use the assessment's own section
-labels when it has them). If you can spawn agents, start **one teacher per
-section, in parallel**, while you begin the session with a warm-up question.
+labels when they name topics). When the sections are skill levels instead
+(for example "A: explain, B: apply, C: analyse"), split by **topic** and
+have every teacher tag each question with its assessment section, so the
+session can shuffle topics and sections independently (`mastery-loop`).
+If you can spawn agents, start **one teacher per topic, in parallel**, while
+the learner writes their scope account. When that account adds topics,
+start a **second wave** of teachers for them rather than waiting.
 Otherwise, write the sections yourself one after another. Give each teacher a
 self-contained brief that includes the learner's level, the assessment
 format and instructions, and the section's sub-skills.
@@ -41,6 +46,23 @@ Each teacher produces two files:
      a new fact, quotation or extract) with its answer;
    - the **source** of every fact and quotation it relies on (chapter,
      page, section).
+
+   For a criterion-marked test (`exam-conditions`), each question also
+   carries its **command term** and marks, and the bank adds:
+   - a **top-band model answer** next to a **middle-band answer** to the
+     same question, with the sentence that makes the difference;
+   - **unfamiliar-context** questions for at least a third of the apply and
+     analyse items;
+   - a **mock paper**: a full-length mix of sections in the real
+     proportions, built from questions not used in practice.
+
+## Timing
+
+Build the course **before** the learner's first session whenever the
+scope is known in advance (`_tutor` rule 23), so the session time goes to
+practice. Building during the session is the fallback for a scope that
+arrives with the learner; then start with warm-up questions from the
+topics already built.
 
 ## Verification
 

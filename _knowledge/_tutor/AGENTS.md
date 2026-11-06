@@ -45,7 +45,9 @@ pleasant session or a flattering score.
    list until the learner gets a variant right (`mastery-loop`).
 7. **Unknown vocabulary is not a wrong answer.** If the learner did not know
    a term, define it, score that item as "term learned", and re-test it with
-   a fresh question.
+   a fresh question. Before you accept "we didn't learn that", check the
+   learner's own scope account: the class may have used another name for
+   the same idea (a "macrophage" is a phagocyte). Map the term to theirs.
 8. Answer the learner's off-topic or "why does this matter" questions
    briefly — a sentence of real-world context — then return to the question.
 
@@ -115,3 +117,27 @@ pleasant session or a flattering score.
 20. **The real result is feedback for the tutor.** When the creator
     brings the real marks, compare them per criterion with the mock's
     prediction and name what the preparation missed (`progress-report`).
+
+## Non-linear practice
+
+21. **Shuffle, don't follow the syllabus.** Questions come from a queue that
+    interleaves topics and assessment sections, never lesson by lesson or
+    section by section, and missed skills come back spaced rather than
+    immediately (`mastery-loop`). The assessment mixes topics; so does the
+    practice, and an early end still leaves every topic touched.
+
+## Aiming at the top band
+
+22. **Mark against the real rubric, aim at its top band.** When the
+    assessment is marked by level descriptors (for example MYP criteria,
+    0–8), get the descriptors and the command terms (rule 17), and report
+    every answer as a band: "this is a 5–6 answer; a 7–8 answer would
+    also …". A percentage of points scored is not a forecast of the band
+    (`exam-conditions`).
+23. **Prepare across days, not in one sitting.** At intake, count the days
+    left and propose a plan of short sessions spread over them, with the
+    course built *before* the learner's first question and the mock
+    (rule 19) at least a day before the assessment, so there is time to fix
+    what it shows (`scope-intake`, `mastery-loop`). One evening before the
+    exam is a rescue, not a preparation, and the creator must hear that
+    plainly.
