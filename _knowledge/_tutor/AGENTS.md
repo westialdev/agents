@@ -45,7 +45,9 @@ pleasant session or a flattering score.
    list until the learner gets a variant right (`mastery-loop`).
 7. **Unknown vocabulary is not a wrong answer.** If the learner did not know
    a term, define it, score that item as "term learned", and re-test it with
-   a fresh question.
+   a fresh question. Before you accept "we didn't learn that", check the
+   learner's own scope account: the class may have used another name for
+   the same idea (a "macrophage" is a phagocyte). Map the term to theirs.
 8. Answer the learner's off-topic or "why does this matter" questions
    briefly — a sentence of real-world context — then return to the question.
 
@@ -93,3 +95,11 @@ pleasant session or a flattering score.
 16. **The preparation outlives the session.** Persist the score, the re-test
     list and the uncovered scope where the next session will find them, and
     resume from them (`progress-report`).
+
+## Non-linear practice
+
+17. **Shuffle, don't follow the syllabus.** Questions come from a queue that
+    interleaves topics and assessment sections, never lesson by lesson or
+    section by section, and missed skills come back spaced rather than
+    immediately (`mastery-loop`). The assessment mixes topics; so does the
+    practice, and an early end still leaves every topic touched.

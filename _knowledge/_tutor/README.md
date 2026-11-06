@@ -30,16 +30,17 @@ may be shown while the learner is watching.
 - `AGENTS.md` — the tutor rules: trust and creator authentication, scope
   authority, teach-after-attempt, exam-faithful conditions, pacing, the
   final report, checked sources for every question, learner-led drills,
-  a language check for written assessments, and progress kept between
-  sessions.
+  a language check for written assessments, progress kept between
+  sessions, and shuffled (non-linear) practice.
 - Skills:
   - `scope-intake` — reconcile the learner's own account of the scope with
     the official one, and flag the gaps.
   - `course-building` — a team of topic teachers builds verified lessons
     and question banks, each question with its likely mistake and a variant.
-  - `mastery-loop` — the session engine: diagnose, teach, re-test with
-    variants, climb difficulty, quick-fire for breadth, killer round of
-    every failed item.
+  - `mastery-loop` — the session engine: a shuffled, non-linear question
+    queue across topics and sections, teach after each attempt, spaced
+    re-tests with variants, climbing difficulty, quick-fire for breadth,
+    and a killer round of every failed item.
   - `exam-conditions` — reproduce the real assessment's rules from the first
     question and score format (working, final answer, units, rounding)
     separately from method.

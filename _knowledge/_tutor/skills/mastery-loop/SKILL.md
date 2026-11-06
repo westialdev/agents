@@ -1,15 +1,48 @@
 ---
 name: mastery-loop
 description: >
-  Run the tutoring session: pick each question, mark the attempt, teach the
-  correction, re-test failed skills with variants, raise difficulty on
-  success, switch to quick-fire rounds for breadth when time is short, and
-  close with a killer round of every previously failed item. Trigger on every
+  Run the tutoring session: draw each question from a shuffled queue that
+  mixes topics and assessment sections, mark the attempt, teach the
+  correction, re-test failed skills with spaced variants, raise difficulty
+  on success, switch to quick-fire rounds for breadth when time is short,
+  and close with a killer round of every previously failed item. Trigger on every
   turn of a tutoring session once the course exists: "next question", "I'm
   ready", a learner's answer.
 ---
 
 # The mastery loop
+
+## Shuffle: a non-linear journey
+
+The course is written topic by topic, but the session must **not** follow
+it. Before the first question, build a **shuffled queue** that interleaves
+every topic (lesson) with every assessment section, and draw from it:
+
+- **Never two questions in a row from the same topic.** Rotate the
+  assessment sections too (for example A → C → B), so each topic is met
+  through recall, application and data.
+- **Breadth first.** Every topic gets one question before any topic gets
+  its second, apart from re-tests.
+- **Space the re-tests.** A missed skill's variant comes back after one or
+  two questions from other topics, not immediately (see *Choose next*).
+- **Quick-fire batches span three different topics**, never three questions
+  from one lesson.
+- **Don't announce the topic.** Ask the question as the exam would, so the
+  learner must recognise which concept it needs.
+
+Why it matters:
+
+- The real assessment mixes topics. A lesson-ordered session gives the
+  topic away, so the learner practises recall but not the skill of
+  recognising *which* idea a question needs.
+- A spaced re-test checks that the fix holds, not just that the learner can
+  echo the correction they read a moment ago.
+- Sessions end early: the creator steps in, or the learner tires. Shuffled
+  from the start, an early end still leaves "a bit of everything". Lesson
+  order leaves whole topics untested, usually the ones in the last lessons.
+
+Keep the queue in the private progress file (`progress-report`) so the
+next session continues the same shuffle.
 
 ## Each turn
 
@@ -24,10 +57,12 @@ description: >
    add a one-line rule to remember. When it helps, add a picture or
    metaphor ("imagine an ant walking all the way round the shape").
 4. **Choose next**:
-   - On a **miss**, ask the bank variant of the same skill next. Point out
-     the trap in the question text if this is the second miss.
-   - On a **hit**, move to a different section, or one level up in the
-     same section.
+   - On a **miss**, put the bank variant of the same skill one or two
+     places further down the queue, so a question from another topic comes
+     first. Point out the trap in the question text if this is the second
+     miss.
+   - On a **hit**, take the next question from the shuffled queue, which is
+     on a different topic. Raise that topic's level for its next turn.
    - If an incomplete message looks accidentally cut off, ask the learner to
      finish it. Do not mark it.
 5. **Update the score line** (`progress-report`).
@@ -45,15 +80,15 @@ a learner who asks for practice is engaged. But (`_tutor` rule 14):
 
 ## Difficulty
 
-Start each section at the applied level. Raise the level after a correct
-answer and lower it after a miss. Before any section gets a fourth question,
-make sure every section has had at least one.
+Start each topic at the applied level. Raise its level after a correct
+answer and lower it after a miss. The shuffle decides *which* topic comes
+next; the difficulty rule decides *how hard* that topic's next question is.
 
 ## Quick-fire mode
 
 When the session window is short or the creator asks for more coverage,
-switch to batches of three short questions, one per section, each answerable
-in a line. Coverage per minute rises a lot. The format rules still apply:
+switch to batches of three short questions, each from a different topic and,
+where possible, a different section, each answerable in a line. Coverage per minute rises a lot. The format rules still apply:
 the final number and the unit are still required.
 
 ## Re-test list
@@ -66,7 +101,8 @@ Name it to the learner as a pattern rather than as another single slip.
 ## Killer round
 
 Near the end, or when the creator asks, run every item still on the re-test
-list in a row, each with new numbers. Announce it as a challenge ("each one
+list in a row, each with new numbers, in shuffled order rather than the
+order in which they failed. Announce it as a challenge ("each one
 has a trap"), let the learner answer in any grouping, and show a
 before → now table afterwards. Any item still failing goes into one final
 "boss" variant.

@@ -18,8 +18,13 @@ and a fresh variant for re-testing.
 ## The teacher team
 
 Split the official scope into its sections (use the assessment's own section
-labels when it has them). If you can spawn agents, start **one teacher per
-section, in parallel**, while you begin the session with a warm-up question.
+labels when they name topics). When the sections are skill levels instead
+(for example "A: explain, B: apply, C: analyse"), split by **topic** and
+have every teacher tag each question with its assessment section, so the
+session can shuffle topics and sections independently (`mastery-loop`).
+If you can spawn agents, start **one teacher per topic, in parallel**, while
+the learner writes their scope account. When that account adds topics,
+start a **second wave** of teachers for them rather than waiting.
 Otherwise, write the sections yourself one after another. Give each teacher a
 self-contained brief that includes the learner's level, the assessment
 format and instructions, and the section's sub-skills.

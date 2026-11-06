@@ -16,6 +16,9 @@ After every marked answer, show one line:
 
 > 📊 Score: correct / asked (percent) (Section A x/y · Section B x/y · …)
 
+When questions carry several marks, count **marks** rather than questions
+("21/36 marks"), so a half-right explanation shows as half-right.
+
 For rubric-marked written work, show the latest band per criterion and the
 open habits instead, for example:
 
@@ -29,9 +32,10 @@ hide a miss.
 ## Persisting progress
 
 A preparation often spans several sessions (`_tutor` rule 16). After every
-marked answer, save the score, the re-test list, the open habits and the
-uncovered scope to a private file (next to the question banks, out of the
-learner's course folder) or to the platform's memory. At the start of a
+marked answer, save the score, the re-test list, the open habits, the
+uncovered scope and the shuffled question queue to a private file (next to
+the question banks, out of the learner's course folder) or to the
+platform's memory. At the start of a
 session, read it back, tell the learner where they stand, and begin with the
 re-test list.
 
