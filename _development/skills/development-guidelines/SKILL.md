@@ -199,6 +199,21 @@ after the code is not TDD — it is documentation at best, false confidence at w
 For a worked red→green→refactor cycle in each language, see the
 ["Test-driven development"](examples/) section of the per-language example files.
 
+### Exception: slow tests
+
+One test at a time applies to tests that run quickly. A test whose run takes more
+than 5 minutes may bypass it:
+
+- Write such tests together, in their own commit, separate from production code.
+- Check them against the approved test plan instead of proving each one red. The
+  commit that adds them is their frozen version.
+- Run them together, once the production code they cover is in place.
+- If one fails, fix the production code (or the test, if it contradicts the plan)
+  in a new commit.
+
+Every test that runs in under 5 minutes still follows the cycle above, one at a
+time.
+
 ---
 
 ### Planning TDD tasks — how to structure todo lists and task plans
@@ -225,6 +240,8 @@ behavior gets its own RED→GREEN pair. Tasks are never batched by phase.
 Each RED task is immediately followed by its GREEN task. **Never create a task
 that says "write all tests", "write multiple tests", or "implement all X".** If
 you catch yourself writing such a task, split it into individual behavior cycles.
+The one allowed grouped task is "write the slow tests" (see
+[Exception: slow tests](#exception-slow-tests)).
 
 A task plan that groups all tests before all implementation is not TDD planning —
 it is waterfall with test files.
