@@ -202,7 +202,7 @@ For a worked red→green→refactor cycle in each language, see the
 ### Exception: slow tests
 
 One test at a time applies to tests that run quickly. A test whose run takes more
-than 30 minutes may bypass it:
+than 5 minutes may bypass it:
 
 - Write such tests together, in their own commit, separate from production code.
 - Check them against the approved test plan instead of proving each one red. The
@@ -211,7 +211,7 @@ than 30 minutes may bypass it:
 - If one fails, fix the production code (or the test, if it contradicts the plan)
   in a new commit.
 
-Every test that runs in under 30 minutes still follows the cycle above, one at a
+Every test that runs in under 5 minutes still follows the cycle above, one at a
 time.
 
 ---
