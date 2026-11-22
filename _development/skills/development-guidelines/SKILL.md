@@ -199,6 +199,23 @@ after the code is not TDD — it is documentation at best, false confidence at w
 For a worked red→green→refactor cycle in each language, see the
 ["Test-driven development"](examples/) section of the per-language example files.
 
+### Exception: tests that only CI can run
+
+One test at a time applies to tests that run quickly on the developer's own
+instance. Tests that only run in CI (for example browser or end-to-end suites the
+local instance cannot run quickly) may bypass it:
+
+- Write them together, in their own commit, separate from production code.
+- Check them against the approved test plan instead of a local red run. The
+  commit that adds them is their frozen version.
+- Do not dispatch targeted CI runs to prove each one red. They run in the full
+  suite on the pull request.
+- If one fails there, fix the production code (or the test, if it contradicts the
+  plan) in a new commit.
+
+Every test that does run quickly on the developer's instance still follows the
+cycle above, one at a time.
+
 ---
 
 ### Planning TDD tasks — how to structure todo lists and task plans
@@ -225,6 +242,8 @@ behavior gets its own RED→GREEN pair. Tasks are never batched by phase.
 Each RED task is immediately followed by its GREEN task. **Never create a task
 that says "write all tests", "write multiple tests", or "implement all X".** If
 you catch yourself writing such a task, split it into individual behavior cycles.
+The one allowed grouped task is "write the CI-only tests" (see
+[Exception: tests that only CI can run](#exception-tests-that-only-ci-can-run)).
 
 A task plan that groups all tests before all implementation is not TDD planning —
 it is waterfall with test files.
