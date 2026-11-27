@@ -70,6 +70,12 @@ count, the audit before the tick.
     subject, counting artefacts not text, citing by name, deriving bounds, and
     sourcing external limits from their owner.
 
+## Narrow it further
+
+- `_many_devs` — one expert serving several devs sessions in parallel, each owning its own
+  paths, one of them the only owner of the shared code; the expert delegates audits and
+  factual research to subagents and keeps the rulings, the ticks and every message.
+
 ## Provisioning requirements
 
 Each session is not viable without the facts of the pair it belongs to. The
